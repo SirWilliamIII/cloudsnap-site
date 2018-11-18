@@ -2,6 +2,7 @@
 	<div>
 		<Navbar/>
 		<Masthead/>
+		<Logos/>
 		<Integrate/>
 	</div>
 
@@ -11,12 +12,14 @@
 import Navbar from '../components/Navbar'
 import Masthead from '../components/Masthead'
 import Integrate from '../components/AppSection'
+import Logos from '../components/AppList'
 
 export default {
 	name: 'IndexPage',
 	components: {
 		Navbar,
 		Masthead,
+		Logos,
 		Integrate
 	}
 }
