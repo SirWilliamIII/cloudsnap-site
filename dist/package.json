@@ -1,9 +1,7 @@
 {
-  "name": "blog",
+  "name": "cloudsnap",
   "version": "1.0.0",
-  "description": "personalblog",
-  "author": "Awesome Author",
-  "private": true,
+  "author": "Will Carpenter",
   "scripts": {
     "postinstall": "npm install express"
   }
