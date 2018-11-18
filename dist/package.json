@@ -1,8 +1,0 @@
-{
-  "name": "cloudsnap",
-  "version": "1.0.0",
-  "author": "Will Carpenter",
-  "scripts": {
-    "postinstall": "npm install express"
-  }
-}
