@@ -1,60 +1,62 @@
 <template>
-	<div id="section-block">
+	<div id="appLogosWrapper">
 		<div class="container">
-			<div class="row text-center">
-				<div class="col-md-4 col-sm-6 my-auto">
-					<img src="../assets/logos/acumatica-logo-tall.svg" class="app-logos">
+			<div class="row text-center mx-auto" id="app-list">
+				<div class="col-md-4 col-sm-6 my-auto" v-for="logo in logos" v-bind:key="logos[logo]">
+					<img :src="logo.img" class="appLogos" />
 				</div>
-				<div class="col-md-4 col-sm-6 my-auto">
-					<img src="../assets/logos/salesforce-logo.png" class="app-logos">
-				</div>
-				<div class="col-md-4 col-sm-6 my-auto">
-					hi
-				</div>
-			</div>
-			<div class="row text-center">
-				<div class="col-md-4 col-sm-6 my-auto">
-					<img src="../assets/logos/shopify-logo-wide.png" class="app-logos">
-				</div>
-				<div class="col-md-4 col-sm-6 my-auto">
-					<img src="../assets/logos/b1-logo.png" class="app-logos">
-				</div>
-
-				<div class="col-md-4 col-sm-6 my-auto">
-					<img src="../assets/logos/concur-logo-wide-blgo.png" class="app-logos">
-				</div>
-			</div>
-			<div class="row text-center">
-				<a href="#" class="btn" id="app_library_button"> <span>View complete library</span> </a>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+	import concur from '../assets/logos/concur-logo-wide-blgo.png'
+	import salesforce from '../assets/logos/salesforce-logo.png'
+	import bigC from '../assets/logos/bigcommerce-logo-wide.png'
+	import acumatica from '../assets/logos/acumatica-logo-tall.svg'
+	import shopify from '../assets/logos/shopify-logo-wide.png'
+	import sap from '../assets/logos/sap-logo.png'
+
+	const logos = [
+		{ img: concur },
+		{ img: salesforce },
+		{ img: bigC },
+		{ img: acumatica },
+		{ img: shopify },
+		{ img: sap }
+	]
+
 	export default {
-		name: 'logos'
+		name: 'logos',
+		data() {
+			return { logos }
+		}
 	}
 </script>
 
 
 <style scoped>
-	#section-block {
-		background-size:     cover;
-		background-position: center;
-		padding:             50px 0;
-		position:            relative;
+	#appLogosWrapper {
+		background-size: cover;
+		background:      url("../assets/various/white-bg.jpg") center;
+		padding:         20px 0 40px;
+		position:        relative;
 	}
 
 	@media only screen and (max-width: 768px) {
-		#section-block {
-			padding:             20px 0;
+		#appLogosWrapper {
+			padding: 20px 0;
 		}
 	}
 
-	.app-logos {
+	.appLogos {
 		max-width:  200px;
 		max-height: 200px;
 		padding:    30px;
+	}
+
+	#app-list {
+		list-style: none;
 	}
 </style>

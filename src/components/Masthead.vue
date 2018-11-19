@@ -4,16 +4,12 @@
 			<div class="row h-100">
 				<div class="col-lg-6 my-auto">
 					<div class="header-content mx-auto">
-						<h1 class="mb-5" id="splash-text">Connect your
-						                                                                                 apps in a
-							<strong>snap</strong>
-						</h1>
+						<MainText/>
 						<SignUpBtn />
 					</div>
 				</div>
 				<div class="col-lg-6 my-auto">
-					<img src="../assets/various/main-comp-img.png" class="img-fluid" id="main-img" alt="header-comp"
-					     style="max-height: 540px;" />
+					<MainImg />
 				</div>
 			</div>
 		</div>
@@ -22,11 +18,14 @@
 
 
 <script>
-	import SignUpBtn from './buttons/SignUp'
+	import SignUpBtn from './buttons/SignUpBtn'
+	import MainImg from './MainImage'
+	import MainText from './MainText'
+
 	export default {
 		name:       'Masthead',
 		components: {
-			SignUpBtn
+			SignUpBtn, MainImg, MainText
 		}
 	}
 </script>
@@ -65,18 +64,9 @@
 		}
 	}
 
-	#splash-text {
-		font-weight: 300;
-		font-size:   90px;
-		margin-bottom: 40px;
-		margin-top: auto;
-		color:       #fff;
-		line-height: inherit;
-	}
 
-	#main-img {
-		max-width: 720px;
-	}
+
+
 
 	@media only screen and (max-width: 768px) {
 		.header-content {
@@ -95,12 +85,5 @@
 			margin-top: 0;
 			font-size:  36px;
 		}
-
-		#main-img {
-			max-width: 340px;
-			margin:    0px auto 50px;
-
-		}
 	}
-
 </style>
