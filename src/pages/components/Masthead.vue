@@ -18,7 +18,7 @@
 
 
 <script>
-	import SignUpBtn from './buttons/SignUpBtn'
+	import SignUpBtn from '../buttons/SignUpBtn'
 	import MainImg from './MainImage'
 	import MainText from './MainText'
 
@@ -39,8 +39,8 @@
 		padding-top:    150px;
 		padding-bottom: 100px;
 		color:          white;
-		background:     url('../assets/various/bg-pattern.png'), #52b9e6;
-		background:     url('../assets/various/bg-pattern.png'), -webkit-gradient(linear, right top, left top, from(#52b9e6), to(#0473a3));
+		background:     url('../../assets/various/bg-pattern.png'), #52b9e6;
+		background:     url('../../assets/various/bg-pattern.png'), -webkit-gradient(linear, right top, left top, from(#52b9e6), to(#0473a3));
 	}
 
 	.masthead .header-content {

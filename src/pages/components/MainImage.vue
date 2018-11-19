@@ -1,5 +1,5 @@
 <template>
-	<img src="../assets/various/main-comp-img.png" class="img-fluid" id="main-img" alt="header-comp" />
+	<img src="../../assets/various/main-comp-img.png" class="img-fluid" id="main-img" alt="header-comp" />
 </template>
 
 <script>

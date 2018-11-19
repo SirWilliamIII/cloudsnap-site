@@ -5,7 +5,7 @@
 </template>
 
 <script>
-	import IndexPage from './pages/index'
+	import IndexPage from './pages/IndexPage/index'
 
 	export default {
 		name:       'app',
