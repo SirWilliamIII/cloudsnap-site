@@ -7,5 +7,6 @@ app.use(serveStatic(__dirname + "/dist"))
 
 app.listen(port)
 console.log('server started '+ port)
+console.log(app)
 
 
