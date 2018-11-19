@@ -3,11 +3,12 @@
 		<app-navbar></app-navbar>
 		<app-splash></app-splash>
 		<app-logos></app-logos>
+		<router-link to="About" style="color: #ffff00;">About</router-link>
 		<app-integrate></app-integrate>
 		<app-contact></app-contact>
 		<app-footer></app-footer>
-	</div>
 
+	</div>
 </template>
 
 <script>
@@ -19,17 +20,15 @@
 	import Footer from '../components/Footer'
 
 	export default {
-		name:       'IndexPage',
+		name:       'Index',
 		components: {
 			'app-navbar':    Navbar,
 			'app-splash':    Masthead,
 			'app-logos':     Logos,
 			'app-integrate': Integrate,
-			'app-contact': Contact,
-			'app-footer': Footer
+			'app-contact':   Contact,
+			'app-footer':    Footer
 		}
 	}
 </script>
 
-<style>
-</style>

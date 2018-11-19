@@ -1,17 +1,12 @@
 <template>
 	<div id="app">
-		<IndexPage />
+		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-	import IndexPage from './pages/IndexPage/index'
-
 	export default {
-		name:       'app',
-		components: {
-			IndexPage
-		}
+		name: 'app'
 	}
 </script>
 

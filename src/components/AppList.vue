@@ -11,12 +11,12 @@
 </template>
 
 <script>
-	import concur from '../../assets/logos/concur-logo-wide-blgo.png'
-	import salesforce from '../../assets/logos/salesforce-logo.png'
-	import bigC from '../../assets/logos/bigcommerce-logo-wide.png'
-	import acumatica from '../../assets/logos/acumatica-logo-tall.svg'
-	import shopify from '../../assets/logos/shopify-logo-wide.png'
-	import sap from '../../assets/logos/sap-logo.png'
+	import concur from '../assets/logos/concur-logo-wide-blgo.png'
+	import salesforce from '../assets/logos/salesforce-logo.png'
+	import bigC from '../assets/logos/bigcommerce-logo-wide.png'
+	import acumatica from '../assets/logos/acumatica-logo-tall.svg'
+	import shopify from '../assets/logos/shopify-logo-wide.png'
+	import sap from '../assets/logos/sap-logo.png'
 
 	const logos = [
 		{ img: concur },
@@ -39,7 +39,7 @@
 <style scoped>
 	#appLogosWrapper {
 		background-size: cover;
-		background:      url("../../assets/various/white-bg.jpg") center;
+		background:      url("../assets/various/white-bg.jpg") center;
 		padding:         20px 0 40px;
 		position:        relative;
 	}

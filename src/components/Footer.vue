@@ -37,7 +37,7 @@
 
 <style scoped>
 	footer {
-		background:     url('../../assets/various/bg-pattern.png'), -webkit-gradient(linear, right top, left top, from(#52b9e6), to(#0473a3));
+		background:     url('../assets/various/bg-pattern.png'), -webkit-gradient(linear, right top, left top, from(#52b9e6), to(#0473a3));
 		font-weight:      100;
 		position:         absolute;
 		width:            100%;

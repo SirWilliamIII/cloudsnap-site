@@ -23,7 +23,7 @@
 
 <style>
 	#integrate {
-		background-image: url('../../assets/various/integrate_bg.jpg');
+		background-image: url('../assets/various/integrate_bg.jpg');
 		margin:           auto;
 	}
 </style>

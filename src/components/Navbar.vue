@@ -5,10 +5,10 @@
 		<nav id="nav-bar" class="navbar navbar-expand-lg fixed-top">
 			<div class="container-fluid mx-3">
 				<Logo />
-				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-				        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-				        aria-label="Toggle navigation">
-					<font-awesome-icon icon="bars"></font-awesome-icon>
+				<router-link to="About" style="color: #ffff00;">About</router-link>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<font-awesome-icon icon="bars">
+					</font-awesome-icon>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="nav navbar-nav ml-auto" v-for="link in navLinks" v-bind:key="navLinks[link]">
