@@ -1,9 +1,10 @@
 <template>
 	<div>
 		<app-navbar></app-navbar>
+				<router-link to="About" style="color: #ffff00;">About</router-link>
 		<app-splash></app-splash>
 		<app-logos></app-logos>
-		<router-link to="About" style="color: #ffff00;">About</router-link>
+
 		<app-integrate></app-integrate>
 		<app-contact></app-contact>
 		<app-footer></app-footer>
@@ -16,7 +17,7 @@
 	import Masthead from '../components/Masthead'
 	import Logos from '../components/AppList'
 	import Integrate from '../components/AppSection'
-	import Contact from '../components/ContactForm'
+	import ContactUs from '../components/forms/ContactUs'
 	import Footer from '../components/Footer'
 
 	export default {
@@ -26,7 +27,7 @@
 			'app-splash':    Masthead,
 			'app-logos':     Logos,
 			'app-integrate': Integrate,
-			'app-contact':   Contact,
+			'app-contact':   ContactUs,
 			'app-footer':    Footer
 		}
 	}
