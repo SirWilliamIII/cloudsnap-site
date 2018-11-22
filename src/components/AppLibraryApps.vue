@@ -12,7 +12,6 @@
 			</div>
 		</div>
 	</div>
-	</div>
 
 </template>
 
@@ -32,7 +31,6 @@
 		created() {
 			this.loading = true
 			axios.get(url).then(res => {
-				console.log(res.data[0])
 				this.apps = res.data
 			})
 				.catch(e => {

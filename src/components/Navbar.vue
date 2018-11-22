@@ -5,17 +5,27 @@
 		<nav id="nav-bar" class="navbar navbar-expand-lg fixed-top">
 			<div class="container-fluid mx-3">
 				<Logo />
-				<router-link to="About" style="color: #ffff00;">About</router-link>
-				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-					<font-awesome-icon icon="bars">
-					</font-awesome-icon>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+				        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				        aria-label="Toggle navigation">
+				<font-awesome-icon icon="bars">
+				</font-awesome-icon>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="nav navbar-nav ml-auto" v-for="link in navLinks" v-bind:key="navLinks[link]">
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#">{{ link.name }}</a>
-						</li>
-					</ul>
+					<div class="nav navbar-nav ml-auto">
+						<div class="nav-item">
+							<router-link to="about" class="nav-link js-scroll-trigger white-text">About</router-link>
+						</div>
+						<div class="nav-item">
+							<router-link to="apps" class="nav-link js-scroll-trigger white-text">Apps</router-link>
+							</div>
+						<div class="nav-item">
+							<router-link to="signUp" class="nav-link js-scroll-trigger white-text">Sign Up</router-link>
+							</div>
+						<div class="nav-item">
+							<router-link to="erps" class="nav-link js-scroll-trigger white-text">ERPs</router-link>
+						</div>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -26,14 +36,14 @@
 	import Logo from './Logo'
 
 	const navLinks = [
-		{ name: 'App Library' },
-		{ name: 'Partners' },
-		{ name: 'Contact' },
-		{ name: 'Free Trial' }
+		{ name: 'About' },
+		{ name: 'Apps' },
+		{ name: 'Sign Up' },
+		{ name: 'ERPs' }
 	]
 
 	export default {
-		name: 'Navbar',
+		name:       'Navbar',
 		components: {
 			Logo
 		},
@@ -75,6 +85,10 @@
 	#nav-bar .navbar-nav > li > a:hover,
 	#nav-bar .navbar-nav > li > a:focus:hover {
 		color: #ccc;
+	}
+
+	.white-text {
+		color: #fff;
 	}
 
 	@media (min-width: 992px) {

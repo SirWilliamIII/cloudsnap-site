@@ -1,7 +1,6 @@
 <template>
 	<div class="about">
 		<h1>What is a Crypto-Currency?</h1>
-
 		<Apps />
 	</div>
 </template>
