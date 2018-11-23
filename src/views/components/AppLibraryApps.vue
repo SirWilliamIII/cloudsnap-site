@@ -29,10 +29,24 @@
 			}
 		},
 		created() {
+			const badIconIds = [137, 255, 261, 264, 271, 272, 273, 277, 281, 282, 283, 289, 294, 295, 304, 305]
+
 			this.loading = true
-			axios.get(url).then(res => {
-				this.apps = res.data
-			})
+			axios.get(url)
+				.then(res => {
+					return res.data
+				})
+				.then(icons => {
+					icons.sort((a, b) => {
+						if(a.name > b.name) {
+							return 1
+						} else {
+							return -1
+						}
+					})
+					this.apps = icons
+				})
+
 				.catch(e => {
 					this.errors.push(e)
 				})

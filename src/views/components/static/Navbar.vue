@@ -8,7 +8,7 @@
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 				        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
 				        aria-label="Toggle navigation">
-					<font-awesome-icon icon="bars">
+					<font-awesome-icon icon="bars" style="color: #fff;">
 					</font-awesome-icon>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
@@ -95,6 +95,12 @@
 
 	.white-text {
 		color: #fff;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.white-text {
+			color: #333;
+		}
 	}
 
 </style>

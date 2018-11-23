@@ -32,6 +32,7 @@
 		flex-direction: column;
 		background:     url('../../assets/images/various/bg-pattern.png'), #52b9e6;
 		background:     url('../../assets/images/various/bg-pattern.png'), -webkit-gradient(linear, right top, left top, from(#52b9e6), to(#0473a3));
+
 	}
 
 	#nav {
@@ -42,6 +43,7 @@
 	#content {
 		display: flex;
 		flex:    1;
+		z-index: 0;
 	}
 
 </style>

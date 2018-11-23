@@ -19,7 +19,7 @@
 			</div>
 			<div class="row">
 				<div class="text-center col-md-12 col-xs-12" id="footer_address">
-					<p>701 Brazos Street Austin, Texas 78701 <br> <sub> &copy; Cloudsnap | All Rights reserved </sub>
+					<p>701 Brazos Street Austin, Texas 78701 <br> <sub> &copy; Cloudsnap | All Rights Reserved </sub>
 					</p>
 				</div>
 			</div>
