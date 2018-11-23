@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import AboutPage from '../views/AboutPage'
-import IndexPage from '../views/IndexPage'
-import AppsPage from '../views/AppsPage'
-import SignUpPage from '../views/SignUpPage'
-import ErpsPage from '../views/ErpsPage'
+import AboutPage from '../views/pages/AboutPage'
+import IndexPage from '../views/pages/IndexPage'
+import AppsPage from '../views/pages/AppsPage'
+import SignUpPage from '../views/pages/SignUpPage'
+import ErpsPage from '../views/pages/ErpsPage'
 
 
 Vue.use(VueRouter)

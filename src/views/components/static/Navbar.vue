@@ -2,28 +2,28 @@
 
 <template>
 	<div>
-		<nav id="nav-bar" class="navbar navbar-expand-lg fixed-top">
-			<div class="container-fluid mx-3">
+		<nav id="nav-bar" class="navbar navbar-expand-md">
+			<div class="container">
 				<Logo />
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 				        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
 				        aria-label="Toggle navigation">
-				<font-awesome-icon icon="bars">
-				</font-awesome-icon>
+					<font-awesome-icon icon="bars">
+					</font-awesome-icon>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<div class="nav navbar-nav ml-auto">
 						<div class="nav-item">
-							<router-link to="about" class="nav-link js-scroll-trigger white-text">About</router-link>
+							<router-link to="about" class="nav-link white-text">About</router-link>
 						</div>
 						<div class="nav-item">
-							<router-link to="apps" class="nav-link js-scroll-trigger white-text">Apps</router-link>
-							</div>
+							<router-link to="apps" class="nav-link white-text">Apps</router-link>
+						</div>
 						<div class="nav-item">
-							<router-link to="signUp" class="nav-link js-scroll-trigger white-text">Sign Up</router-link>
-							</div>
+							<router-link to="signUp" class="nav-link white-text">Sign Up</router-link>
+						</div>
 						<div class="nav-item">
-							<router-link to="erps" class="nav-link js-scroll-trigger white-text">ERPs</router-link>
+							<router-link to="erps" class="nav-link white-text">ERPs</router-link>
 						</div>
 					</div>
 				</div>
@@ -56,13 +56,19 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+
 	#nav-bar {
-		-webkit-transition: all .35s;
-		transition:         all .35s;
+		-webkit-transition: 0.3s;
+		position:           fixed;
+		top:                0;
+		width:              100%;
 		font-family:        'Lato', 'Helvetica', 'Arial', 'sans-serif';
 		font-weight:        300;
 		letter-spacing:     1px;
+		border-color:       transparent;
+		background-color:   transparent;
+		z-index: 1;
 	}
 
 	#nav-bar .navbar-toggler {
@@ -91,20 +97,4 @@
 		color: #fff;
 	}
 
-	@media (min-width: 992px) {
-		#nav-bar {
-			border-color:     transparent;
-			background-color: transparent;
-		}
-
-		#nav-bar .navbar-nav > li > a,
-		#nav-bar .navbar-nav > li > a:focus {
-			color: #fff;
-		}
-
-		#nav-bar .navbar-nav > li > a:hover,
-		#nav-bar .navbar-nav > li > a:focus:hover {
-			color: #ccc;
-		}
-	}
 </style>

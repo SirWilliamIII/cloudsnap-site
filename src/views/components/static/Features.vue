@@ -13,10 +13,10 @@
 </template>
 
 <script>
-	import easyImg from '../assets/icons/easy-black.png'
-	import connectImg from '../assets/icons/connect-black.png'
-	import wfImg from '../assets/icons/workflow-black.png'
-	import hybridImg from '../assets/icons/hybrid-black.png'
+	import easyImg from '../../../assets/images/icons/easy-black.png'
+	import connectImg from '../../../assets/images/icons/connect-black.png'
+	import wfImg from '../../../assets/images/icons/workflow-black.png'
+	import hybridImg from '../../../assets/images/icons/hybrid-black.png'
 
 	const icons = [
 		{

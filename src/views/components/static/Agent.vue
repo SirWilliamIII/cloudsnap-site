@@ -35,7 +35,7 @@
 
 <style>
 	#prem {
-		background-image: url('../assets/various/prem_bg.jpg');
+		background-image: url('../../../assets/images/various/prem_bg.jpg');
 	}
 
 	.section_text {

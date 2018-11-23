@@ -5,8 +5,36 @@
 </template>
 
 <script>
+	let prevScrollpos = window.pageYOffset;
+
 	export default {
-		name: 'app'
+		name:    'app',
+		methods: {
+			handleScroll: e => {
+				const nav = document.getElementById('nav-bar')
+
+				let currentScrollPos = window.pageYOffset;
+
+				if(prevScrollpos > currentScrollPos) {
+					nav.style.top = "0"
+				} else {
+					nav.style.top = "-85px"
+				}
+				prevScrollpos = currentScrollPos;
+				if(prevScrollpos > "90") {
+					nav.style.backgroundColor = "#333"
+				} else {
+					nav.style.backgroundColor = "rgba(0,0,0,0)"
+				}
+			}
+		},
+
+		created:   function () {
+			window.addEventListener('scroll', this.handleScroll);
+		},
+		destroyed: function () {
+			window.removeEventListener('scroll', this.handleScroll);
+		}
 	}
 </script>
 
@@ -34,18 +62,17 @@
 	}
 
 	#app {
+		display:                 flex;
+		min-height:              100vh;
+		flex-direction:          column;
 		overflow-x:              hidden;
-		width:                   100%;
-		height:                  100%;
-		margin:                  0;
-		padding:                 0;
+
 		font-family:             'Lato', Arial, sans-serif;
 		-webkit-font-smoothing:  antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		color:                   #333;
-		background:              url("assets/various/bg-pattern.png"), #52B9E6;
-		background:              url("assets/various/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#52B9E6), to(#0473A3));
-		background:              url("assets/various/bg-pattern.png"), linear-gradient(to left, #52B9E6, #0473A3);
+		background:              url("assets/images/various/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#52B9E6), to(#0473A3));
+		background:              url("assets/images/various/bg-pattern.png"), linear-gradient(to left, #52B9E6, #0473A3);
 
 	}
 </style>
