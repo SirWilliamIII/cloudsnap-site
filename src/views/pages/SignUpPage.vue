@@ -1,18 +1,35 @@
 <template>
-	<div>
-		<h1>sign up page</h1>
+	<div id="bg">
+		<Navbar/>
+			<div id="content">
+				<!-- TEMPLATE HERE-->
+
+
+
+				<!-- END -->
+			</div>
+		<Footer/>
 	</div>
 </template>
 
 <script>
+	import Navbar from '../components/static/Navbar'
+	import Footer from '../components/static/Footer'
+
 	export default {
-		name:    'SignUpPage',
-		data() {
-			return {}
+		name: 'SignUpPage',
+		components: {
+			Navbar, Footer
 		}
 	}
 </script>
 
-<style>
+<style scoped>
+
+	#bg, #content {
+		display:        flex;
+		flex-direction: column;
+		flex:           1;
+	}
 
 </style>

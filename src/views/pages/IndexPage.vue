@@ -1,5 +1,5 @@
 <template>
-	<div class="about" id="bg">
+	<div id="bg">
 		<Navbar/>
 			<div id="content">
 				<!-- TEMPLATE HERE-->
@@ -17,7 +17,7 @@
 	import Footer from '../components/static/Footer'
 
 	export default {
-		name:       'index',
+		name: 'IndexPage',
 		components: {
 			Navbar, Footer
 		}

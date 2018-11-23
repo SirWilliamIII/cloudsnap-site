@@ -1,19 +1,34 @@
 <template>
-    <div>
-        <h1>apps page</h1>
-    </div>
+	<div id="bg">
+		<Navbar />
+		<div id="content">
+			<!-- TEMPLATE HERE-->
+
+
+			<!-- END -->
+		</div>
+		<Footer />
+	</div>
 </template>
 
 <script>
-    export default {
-        name: 'appsPage',
-        data () {
-            return {
+	import Navbar from '../components/static/Navbar'
+	import Footer from '../components/static/Footer'
 
-            }
-        }
-    }
+	export default {
+		name:       'AppsPage',
+		components: {
+			Navbar, Footer
+		}
+	}
 </script>
 
-<style>
+<style scoped>
+
+	#bg, #content {
+		display:        flex;
+		flex-direction: column;
+		flex:           1;
+	}
+
 </style>

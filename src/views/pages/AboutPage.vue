@@ -17,7 +17,7 @@
 	import AppLibrary from '../components/AppLibraryApps'
 
 	export default {
-		name:       'aboutPage',
+		name:       'AboutPage',
 		components: {
 			Navbar, Footer, AppLibrary
 		}
