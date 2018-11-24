@@ -52,7 +52,7 @@
 		background-color: rgba(0, 0, 0, 0);
 		font-weight:      100;
 		width:            100%;
-		position:         fixed;
+		position:         relative;
 		left:             0;
 		bottom:           0;
 	}

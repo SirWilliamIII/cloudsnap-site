@@ -5,6 +5,7 @@ import IndexPage from '../views/pages/IndexPage'
 import AppsPage from '../views/pages/AppsPage'
 import SignUpPage from '../views/pages/SignUpPage'
 import ErpsPage from '../views/pages/ErpsPage'
+import ContactPage from '../views/pages/ContactPage'
 
 
 Vue.use(VueRouter)
@@ -25,6 +26,9 @@ const routes = [
 	}, {
 		path:      '/erps',
 		component: ErpsPage
+	}, {
+		path: '/contact',
+		component: ContactPage
 	}
 ]
 

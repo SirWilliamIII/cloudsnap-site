@@ -3,9 +3,12 @@
 		<Navbar />
 		<div id="content">
 			<!-- TEMPLATE HERE-->
-			<AppLibrary />
+
+				<ContactForm />
+
+
+			</div>
 			<!-- END -->
-		</div>
 		<Footer />
 	</div>
 </template>
@@ -13,12 +16,14 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
-	import AppLibrary from '../components/stateful/AppLibraryApps'
+
+
+	import ContactForm from '../components/stateful/ContactForm'
 
 	export default {
-		name:       'AppsPage',
+		name:       'ContactPage',
 		components: {
-			Navbar, Footer, AppLibrary
+			Navbar, Footer, ContactForm
 		}
 	}
 </script>
@@ -34,6 +39,6 @@
 	}
 
 	#content {
-		margin-top: 150px;
+		margin-top: 100px;
 	}
 </style>

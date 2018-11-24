@@ -25,6 +25,9 @@
 						<div class="nav-item">
 							<router-link to="erps" class="nav-link">ERPs</router-link>
 						</div>
+						<div class="nav-item">
+							<router-link to="contact" class="nav-link">Contact</router-link>
+						</div>
 					</div>
 
 				</div>
@@ -40,7 +43,8 @@
 		{ name: 'About' },
 		{ name: 'Apps' },
 		{ name: 'Sign Up' },
-		{ name: 'ERPs' }
+		{ name: 'ERPs' },
+		{ name: 'Contact'}
 	]
 
 	export default {
