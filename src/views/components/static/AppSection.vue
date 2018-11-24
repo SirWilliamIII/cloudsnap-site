@@ -12,7 +12,7 @@
 </template>
 
 <script>
-	import SplashText from './SplashText'
+	import SplashText from './Splash/SplashText'
 	export default {
 		name:       'integrate',
 		components: {

@@ -3,10 +3,7 @@
 		<Navbar />
 		<div id="content">
 			<!-- TEMPLATE HERE-->
-			<AppList />
-			<AppList />
-			<AppList />
-			<AppList />
+			<AppLibrary />
 			<!-- END -->
 		</div>
 		<Footer />
@@ -16,12 +13,12 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
-	import AppList from '../components/static/AppList'
+	import AppLibrary from '../components/AppLibraryApps'
 
 	export default {
 		name:       'AppsPage',
 		components: {
-			Navbar, Footer, AppList
+			Navbar, Footer, AppLibrary
 		}
 	}
 </script>
@@ -37,6 +34,6 @@
 	}
 
 	#content {
-		margin-top: 80px;
+		margin-top: 100px;
 	}
 </style>

@@ -3,10 +3,7 @@
 		<Navbar />
 		<div id="content">
 			<!-- TEMPLATE HERE-->
-			<AppList />
-			<AppList />
-			<AppList />
-			<AppList />
+			<h1>ERPs Page</h1>
 			<!-- END -->
 		</div>
 		<Footer />
@@ -16,12 +13,11 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
-	import AppList from '../components/static/AppList'
 
 	export default {
 		name:       'ErpsPage',
 		components: {
-			Navbar, Footer, AppList
+			Navbar, Footer
 		}
 	}
 </script>

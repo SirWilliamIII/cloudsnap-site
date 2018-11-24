@@ -49,7 +49,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 
 	#features {
 		background-color: #FFC228;

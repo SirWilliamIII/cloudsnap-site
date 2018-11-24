@@ -3,7 +3,6 @@
 		<Navbar />
 		<div id="content">
 			<!-- TEMPLATE HERE-->
-			<Splash />
 
 			<!-- END -->
 		</div>
@@ -14,12 +13,11 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
-	import Splash from '../components/static/Splash/Splash'
 
 	export default {
-		name:       'IndexPage',
+		name:       'TemplatePage',
 		components: {
-			Navbar, Footer, Splash
+			Navbar, Footer
 		}
 	}
 </script>
@@ -27,6 +25,7 @@
 <style scoped>
 
 	#bg, #content {
+
 		display:        flex;
 		flex-direction: column;
 		flex:           1;
@@ -34,12 +33,6 @@
 	}
 
 	#content {
-		margin-top: 80px;
-	}
-
-	@media only screen and (max-width: 768px) {
-		#content {
-			margin-top: 0;
-		}
+		margin-top: 100px;
 	}
 </style>

@@ -1,5 +1,7 @@
 <template>
-	<a href="#" class="btn" id="sign-up-btn">Sign up for a free trial! </a>
+	<div id="btnWrapper">
+		<router-link to="signup" class="btn" id="sign-up-btn">Sign up for a free trial!</router-link>
+	</div>
 </template>
 
 <script>
@@ -12,9 +14,9 @@
 	#sign-up-btn {
 		background-color: #ff5128;
 		font-weight:      700;
-		font-size:        22px;
+		font-size:        24px;
 		border-radius:    10px;
-		padding:          20px;
+		padding:          25px;
 		color:            #ccc;
 	}
 
@@ -24,8 +26,9 @@
 	}
 
 	@media only screen and (max-width: 768px) {
-		#sign-up-btn {
-			margin-top: 10px;
+		#btnWrapper {
+			margin: 80px 80px 80px 60px;
 		}
+
 	}
 </style>

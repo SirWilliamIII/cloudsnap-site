@@ -3,8 +3,8 @@
 <template>
 	<div>
 		<nav id="nav-bar" class="navbar navbar-expand-md">
-			<div class="container">
-				<Logo />
+			<div class="container" style="display: flex;">
+				<Logo class="navbar-brand" />
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 				        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
 				        aria-label="Toggle navigation">
@@ -14,18 +14,19 @@
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<div class="nav navbar-nav ml-auto">
 						<div class="nav-item">
-							<router-link to="about" class="nav-link white-text">About</router-link>
+							<router-link to="about" class="nav-link">About</router-link>
 						</div>
 						<div class="nav-item">
-							<router-link to="apps" class="nav-link white-text">Apps</router-link>
+							<router-link to="apps" class="nav-link">Apps</router-link>
 						</div>
 						<div class="nav-item">
-							<router-link to="signUp" class="nav-link white-text">Sign Up</router-link>
+							<router-link to="signUp" class="nav-link">Sign Up</router-link>
 						</div>
 						<div class="nav-item">
-							<router-link to="erps" class="nav-link white-text">ERPs</router-link>
+							<router-link to="erps" class="nav-link">ERPs</router-link>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</nav>
@@ -59,7 +60,7 @@
 <style>
 
 	#nav-bar {
-		-webkit-transition: 0.3s;
+		-webkit-transition: 0.55s;
 		position:           fixed;
 		top:                0;
 		width:              100%;
@@ -68,7 +69,7 @@
 		letter-spacing:     1px;
 		border-color:       transparent;
 		background-color:   transparent;
-		z-index: 1;
+		z-index:            1;
 	}
 
 	#nav-bar .navbar-toggler {
@@ -93,14 +94,24 @@
 		color: #ccc;
 	}
 
-	.white-text {
+	.nav-link {
 		color: #fff;
 	}
 
+	.nav-link:hover {
+		color: #aaa;
+	}
+
 	@media only screen and (max-width: 768px) {
-		.white-text {
-			color: #333;
+
+		.nav-link {
+			color: #fff;
 		}
+
+		.nav-link:hover {
+			color: #aaa;
+		}
+
 	}
 
 </style>

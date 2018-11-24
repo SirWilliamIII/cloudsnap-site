@@ -1,9 +1,9 @@
 <template>
-
+<div class="container">
 	<div class="row" id="appCards">
 		<div v-for="app in apps" :key="apps[app]">
 			<div class="card">
-				<img :src="app.icon.url" alt="img" class="card-img-top" id="appIcon" />
+				<img :src="app.icon.url" alt="img" class="card-img-top mx-auto" id="appIcon" />
 				<div class="card-body">
 					<h5 class="card-title">
 						{{ app.name }}
@@ -12,7 +12,7 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 </template>
 
 <script>
@@ -82,6 +82,11 @@
 	.card:hover {
 		transform:  translateY(-0.5em);
 		background: #EBEBEB;
+	}
+
+	img {
+		max-width: 60px;
+		max-height: 60px;
 	}
 
 </style>
