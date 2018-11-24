@@ -1,17 +1,36 @@
+/* eslint-disable */
+
 <template>
 	<div id="contact-form" class="contact-form">
-		<div class="row">
-			<div class="col-md-8">
-				<h1 class="contact-form_title">{{ cloudsnap.title }}</h1>
+		<div class="row mx-auto">
+			<div class="col-md-9">
+				<h1 v-if="!messageSent" class="contact-form-title">{{ cloudsnap.title }}</h1>
+				<h1 v-if="messageSent" class="contact-form-title">{{ cloudsnap.successMessage }}</h1>
+
 				<div class="separator"></div>
 				<div v-if="isSending" class="loading">Delivering Message...</div>
 
-				<form class="form" @submit.prevent="handleSubmit">
-					<input required name="name" v-model='contact.name' placeholder="Name" type="text"
-					       autocomplete="on">
-					<input required name="email" v-model="contact.email" placeholder="E-mail" type="email"
-					       autocomplete="on">
-					<textarea name="message" v-model="contact.message" rows="4" placeholder="Message"></textarea>
+
+				<form class="form" @submit.prevent="handleSubmit" id="submitForm">
+					<input
+						type="text"
+						name="name"
+						placeholder="Name"
+						v-model="contact.name">
+					<input
+						v-validate="{ required: true, email:true, regex: /[0-9]+/ }"
+						type="email"
+						name="email"
+						placeholder="Email"
+						v-model="contact.email"
+						required
+					>
+					<textarea name="message"
+					          v-model="contact.message"
+					          rows="4"
+					          placeholder="Message"
+					>
+					</textarea>
 					<button class="button" type="submit">Send</button>
 				</form>
 			</div>
@@ -44,20 +63,20 @@
 		name:    'contactForm',
 		data() {
 			return {
-				contact:   {
+				contact:     {
 					name:    '',
 					email:   '',
 					message: ''
 				},
-				cloudsnap: {
-					title:    'Contact Form',
-					city:     'Austin, TX USA',
-					phoneNum: '(877) 841-0203',
-					email:    'sales@cloudsnap.com'
-
-
+				cloudsnap:   {
+					title:          'Contact Form',
+					city:           'Austin, TX USA',
+					phoneNum:       '(877) 841-0203',
+					email:          'sales@cloudsnap.com',
+					successMessage: 'Message Sent!'
 				},
-				isSending: false
+				isSending:   false,
+				messageSent: false
 			}
 		},
 		methods: {
@@ -65,7 +84,7 @@
 				e.preventDefault()
 				const url = 'http://localhost:3333/vets'
 				this.isSending = true
-				let data = {
+				let formData = {
 					name:    this.contact.name,
 					email:   this.contact.email,
 					message: this.contact.message,
@@ -74,15 +93,17 @@
 				axios({
 					method: 'post',
 					url,
-					data,
+					data:   formData,
 					config: { headers: { 'Content-Type:': 'application/json' } }
 				})
 					.then(res => {
-						console.log(res)
-						this.isSending = false;
+						if(res.status !== 404 && this.isSending === true) {
+							this.isSending = false;
+							this.messageSent = true;
+						}
 					})
 					.catch(e => {
-						console.log(e)
+						return e
 					})
 			}
 		}
@@ -93,16 +114,17 @@
 <style>
 
 	.contact-form {
-		margin: 100px auto 0 auto;
-		max-width: 720px;
-		width:     100%;
+		margin:     40px auto 0 auto;
+		max-width:  720px;
+		width:      100%;
+		transition: 0.35s;
 	}
 
 	.contact-form .separator {
 		border-bottom: solid 1px #ccc;
 		margin-bottom: 30px;
-		margin-left: 30px;
-		margin-right: 30px;
+		margin-left:   30px;
+		margin-right:  30px;
 	}
 
 	.contact-form .form {
@@ -111,10 +133,10 @@
 		font-size:      22px;
 	}
 
-	.contact-form_title {
+	.contact-form-title {
 		color:      #fff;
 		text-align: center;
-		font-size:  30px;
+		font-size:  44px;
 	}
 
 	.contact-form input[type="email"],
@@ -156,7 +178,7 @@
 	}
 
 	#sideLogos {
-		color: #fff;
+		color:      #fff;
 		margin-top: 50px;
 
 	}
@@ -167,10 +189,9 @@
 		}
 
 		.contact-form {
-			margin-top:    140px;
+			margin-top:    60px;
 			margin-bottom: auto;
 		}
-
 
 	}
 </style>
