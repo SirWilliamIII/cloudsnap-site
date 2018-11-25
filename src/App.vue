@@ -11,6 +11,7 @@
 		name:    'app',
 		methods: {
 			handleScroll: e => {
+				e.preventDefault()
 				const nav = document.getElementById('nav-bar')
 
 				let currentScrollPos = window.pageYOffset;
@@ -18,10 +19,10 @@
 				if(prevScrollpos > currentScrollPos) {
 					nav.style.top = "0"
 				} else {
-					nav.style.top = "-85px"
+					nav.style.top = "-95px"
 				}
 				prevScrollpos = currentScrollPos;
-				if(prevScrollpos > "90") {
+				if(prevScrollpos > "95") {
 					nav.style.backgroundColor = "#333"
 				} else {
 					nav.style.backgroundColor = "rgba(0,0,0,0)"

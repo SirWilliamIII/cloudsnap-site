@@ -3,15 +3,22 @@
 <template>
 	<div id="contact-form" class="contact-form">
 		<div class="row mx-auto">
-			<div class="col-md-9">
+			<div class="col-md-9 text-center">
 				<h1 v-if="!messageSent" class="contact-form-title">{{ cloudsnap.title }}</h1>
-				<h1 v-if="messageSent" class="contact-form-title">{{ cloudsnap.successMessage }}</h1>
+				<h1 v-if="messageSent" class="contact-form-title-after">
+					{{ cloudsnap.successMessage }}
+				</h1>
+				<p v-if="messageSent" class="lead" style="color: #fff;">
+					{{ cloudsnap.successMessageSub }}
+				</p>
 
-				<div class="separator"></div>
+
+				<div v-if="!messageSent" class="separator"></div>
+
+
 				<div v-if="isSending" class="loading">Delivering Message...</div>
+				<form v-if="!messageSent" class="form" @submit.prevent="handleSubmit" id="submitForm">
 
-
-				<form class="form" @submit.prevent="handleSubmit" id="submitForm">
 					<input
 						type="text"
 						name="name"
@@ -34,15 +41,15 @@
 					<button class="button" type="submit">Send</button>
 				</form>
 			</div>
-			<div class="col-md-3" id="sideLogos">
+			<div class="col-md-3" id="sideLogos" v-if="!messageSent">
 				<div class="col-md-12 text-center">
 					<ul class="list-unstyled mb-0">
 						<li class="list-item"><i class="fa fa-map-marker fa-2x"></i>
-							<p>{{ cloudsnap.city }}</p>
+							<p>{{ cloudsnap.address }} {{ cloudsnap.city }}</p>
 						</li>
 
 						<li class="list-item"><i class="fa fa-phone mt-4 fa-2x"></i>
-							<p>{{ cloudsnap.phoneNum }}</p>
+							<p>{{ cloudsnap.phone }}</p>
 						</li>
 
 						<li class="list-item"><i class="fa fa-envelope mt-4 fa-2x"></i>
@@ -69,11 +76,13 @@
 					message: ''
 				},
 				cloudsnap:   {
-					title:          'Contact Form',
-					city:           'Austin, TX USA',
-					phoneNum:       '(877) 841-0203',
+					title:          'Contact Us!',
+					address:        '701 Brazos St.',
+					city:           'Austin, TX',
+					phone:          '(877) 841-0203',
 					email:          'sales@cloudsnap.com',
-					successMessage: 'Message Sent!'
+					successMessage: 'Message Sent!',
+					successMessageSub: 'Thanks for the inquiry! We will contact you shortly!'
 				},
 				isSending:   false,
 				messageSent: false
@@ -98,8 +107,9 @@
 				})
 					.then(res => {
 						if(res.status !== 404 && this.isSending === true) {
-							this.isSending = false;
-							this.messageSent = true;
+							this.isSending = false
+							this.messageSent = true
+
 						}
 					})
 					.catch(e => {
@@ -137,6 +147,14 @@
 		color:      #fff;
 		text-align: center;
 		font-size:  44px;
+	}
+
+	.contact-form-title-after {
+		color:       #fff;
+		text-align:  center;
+		font-weight: 300;
+		font-size:   100px;
+		margin-top:  150px;
 	}
 
 	.contact-form input[type="email"],
@@ -189,9 +207,21 @@
 		}
 
 		.contact-form {
-			margin-top:    60px;
+			margin-top:    0;
 			margin-bottom: auto;
 		}
+		.contact-form-title {
+			margin-top: 0px;
+		}
+
+
+	.contact-form-title-after {
+		color:       #fff;
+		text-align:  center;
+		font-weight: 300;
+		font-size:   80px;
+		margin-top:  0px;
+	}
 
 	}
 </style>

@@ -3,7 +3,9 @@
 		<Navbar />
 		<div id="content">
 			<!-- TEMPLATE HERE-->
-			<h1>Sign up Page</h1>
+
+			<SignUpForm />
+
 			<!-- END -->
 		</div>
 		<Footer />
@@ -13,11 +15,12 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
+	import SignUpForm from '../components/static/SignUp/SignUpForm'
 
 	export default {
 		name:       'SignupPage',
 		components: {
-			Navbar, Footer
+			Navbar, Footer, SignUpForm
 		}
 	}
 </script>
@@ -30,9 +33,11 @@
 		flex-direction: column;
 		flex:           1;
 		z-index:        0;
+		overflow: hidden;
 	}
 
 	#content {
 		margin-top: 100px;
 	}
+
 </style>

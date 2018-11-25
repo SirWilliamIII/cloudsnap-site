@@ -20,7 +20,7 @@
 							<router-link to="apps" class="nav-link">Apps</router-link>
 						</div>
 						<div class="nav-item">
-							<router-link to="signUp" class="nav-link">Sign Up</router-link>
+							<router-link to="signup" class="nav-link">Sign Up</router-link>
 						</div>
 						<div class="nav-item">
 							<router-link to="erps" class="nav-link">ERPs</router-link>
@@ -30,6 +30,9 @@
 						</div>
 					</div>
 
+				</div>
+				<div class="nav navbar-nav" style="margin-left: 100px;" id="navPhoneNumWrapper">
+					<p id="navPhoneNum"><i class="fa fa-phone"></i> 877.841.0203</p>
 				</div>
 			</div>
 		</nav>
@@ -44,7 +47,7 @@
 		{ name: 'Apps' },
 		{ name: 'Sign Up' },
 		{ name: 'ERPs' },
-		{ name: 'Contact'}
+		{ name: 'Contact' }
 	]
 
 	export default {
@@ -106,6 +109,13 @@
 		color: #aaa;
 	}
 
+	#navPhoneNum {
+		text-align:  right;
+		color:       #fff;
+		font-weight: 300;
+		font-size:   22px;
+	}
+
 	@media only screen and (max-width: 768px) {
 
 		.nav-link {
@@ -114,6 +124,10 @@
 
 		.nav-link:hover {
 			color: #aaa;
+		}
+
+		#navPhoneNumWrapper {
+			display: none;
 		}
 
 	}
