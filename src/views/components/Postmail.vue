@@ -9,7 +9,7 @@
       <!-- return urls can be fully qualified -OR-
          start with / for root relative -OR-
          start with . for url relative -->
-    <input type="hidden" name="success_url" value="/thanks" />
+    <input type="hidden" name="success_url" value="/#/thanks" />
     <input type="hidden" name="error_url" value="/#/error/" />
 
 
