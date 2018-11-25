@@ -1,12 +1,6 @@
 #!/bin/bash
 
-git pull origin master
-
-if [[ $? -eq 0 ]]
-then
-
-
-git commit -am "_"
+git commit -am "deploy to heroku"
 git push heroku master
 
-fi
+
