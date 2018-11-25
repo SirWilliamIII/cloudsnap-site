@@ -14,9 +14,10 @@
 				e.preventDefault()
 				const nav = document.getElementById('nav-bar')
 
-				let currentScrollPos = window.pageYOffset;
 
+				let currentScrollPos = window.pageYOffset;
 				if(prevScrollpos > currentScrollPos) {
+					console.log(nav.style.top)
 					nav.style.top = "0"
 				} else {
 					nav.style.top = "-95px"

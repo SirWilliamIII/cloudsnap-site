@@ -31,7 +31,7 @@
 					</div>
 
 				</div>
-				<div class="nav navbar-nav" style="margin-left: 100px;" id="navPhoneNumWrapper">
+				<div class="nav navbar-nav ml-auto" id="navPhoneNumWrapper">
 					<p id="navPhoneNum"><i class="fa fa-phone"></i> 877.841.0203</p>
 				</div>
 			</div>
@@ -109,11 +109,18 @@
 		color: #aaa;
 	}
 
+	#navPhoneNumWrapper {
+		padding-left: 100px;
+	}
+
 	#navPhoneNum {
-		text-align:  right;
 		color:       #fff;
 		font-weight: 300;
 		font-size:   22px;
+	}
+
+	#apps {
+		text-align: center;
 	}
 
 	@media only screen and (max-width: 768px) {

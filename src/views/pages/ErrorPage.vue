@@ -3,8 +3,7 @@
 		<Navbar />
 		<div id="content">
 			<!-- TEMPLATE HERE-->
-			<h1>About Page</h1>
-			<Postmail />
+
 			<!-- END -->
 		</div>
 		<Footer />
@@ -14,12 +13,11 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
-import Postmail from '../components/Postmail'
 
 	export default {
-		name:       'AboutPage',
+		name:       'ErrorPage',
 		components: {
-			Navbar, Footer, Postmail
+			Navbar, Footer
 		}
 	}
 </script>
@@ -35,6 +33,6 @@ import Postmail from '../components/Postmail'
 	}
 
 	#content {
-		margin-top: 80px;
+		margin-top: 100px;
 	}
 </style>

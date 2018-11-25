@@ -6,6 +6,8 @@ import AppsPage from '../views/pages/AppsPage'
 import SignUpPage from '../views/pages/SignUpPage'
 import ErpsPage from '../views/pages/ErpsPage'
 import ContactPage from '../views/pages/ContactPage'
+import ThanksPage from '../views/pages/ThanksPage'
+import ErrorPage from '../views/pages/ErrorPage'
 
 
 Vue.use(VueRouter)
@@ -29,6 +31,12 @@ const routes = [
 	}, {
 		path: '/contact',
 		component: ContactPage
+	}, {
+		path: '/thanks',
+		component: ThanksPage
+	}, {
+		path: '/error',
+		component: ErrorPage
 	}
 ]
 
