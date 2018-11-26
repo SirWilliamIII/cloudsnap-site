@@ -44,6 +44,7 @@
 
 	#splash {
 		margin-top: 100px;
+		height: 100vh;
 	}
 
 	#signUpBtn {
@@ -60,15 +61,20 @@
 	}
 
 	@media only screen and (max-width: 768px) {
+		#splash {
+			margin-top: 20px;
+		}
+
 		.header-content {
 			display: none;
 		}
 
+		#signUpBtn1{
+			visibility: hidden;
+		}
 		#signUpBtn {
 			visibility: visible;
 		}
-		#signUpBtn {
-			display: show;
-		}
+
 	}
 </style>

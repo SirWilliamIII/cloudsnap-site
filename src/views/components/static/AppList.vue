@@ -46,14 +46,15 @@
 
 	@media only screen and (max-width: 768px) {
 		#appLogosWrapper {
-			padding: 20px 0;
+			padding-top: 20px;
+			height:  100vh;
 		}
 	}
 
 	.appLogos {
 		max-width:  200px;
 		max-height: 200px;
-		padding:    30px;
+		padding:    20px;
 	}
 
 	#app-list {

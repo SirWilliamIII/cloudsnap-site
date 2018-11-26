@@ -4,6 +4,10 @@
 		<div id="content">
 			<!-- TEMPLATE HERE-->
 			<Splash />
+			<Features />
+			<AppList />
+
+			<Agent />
 
 			<!-- END -->
 		</div>
@@ -15,11 +19,14 @@
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
 	import Splash from '../components/static/Splash/Splash'
+	import AppList from '../components/static/AppList'
+	import Features from '../components/static/Features'
+	import Agent from '../components/static/Agent'
 
 	export default {
 		name:       'IndexPage',
 		components: {
-			Navbar, Footer, Splash
+			Navbar, Footer, Splash, AppList, Features, Agent
 		}
 	}
 </script>

@@ -9,6 +9,7 @@ import ContactPage from '../views/pages/ContactPage'
 import ThanksPage from '../views/pages/ThanksPage'
 import ErrorPage from '../views/pages/ErrorPage'
 import PostmailPage from '../views/pages/EmailUsPage'
+import AgentPage from '../views/pages/AgentPage'
 
 
 Vue.use(VueRouter)
@@ -41,6 +42,9 @@ const routes = [
 	}, {
 		path: '/email',
 		component: PostmailPage
+	}, {
+		path: '/agent',
+		component: AgentPage
 	}
 ]
 
