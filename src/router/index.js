@@ -10,6 +10,7 @@ import ThanksPage from '../views/pages/ThanksPage'
 import ErrorPage from '../views/pages/ErrorPage'
 import PostmailPage from '../views/pages/EmailUsPage'
 import AgentPage from '../views/pages/AgentPage'
+import TestPage from '../views/pages/TestPage'
 
 
 Vue.use(VueRouter)
@@ -45,6 +46,9 @@ const routes = [
 	}, {
 		path: '/agent',
 		component: AgentPage
+	}, {
+		path: '/will',
+		component: TestPage
 	}
 ]
 

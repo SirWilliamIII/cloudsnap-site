@@ -20,7 +20,7 @@
 </template>
 
 <script>
-	import AgentBtn from '../buttons/AgentBtn'
+	import AgentBtn from './buttons/AgentBtn'
 
 	export default {
 		name:       'prem',

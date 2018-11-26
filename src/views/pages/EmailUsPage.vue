@@ -13,7 +13,7 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
-	import Postmail from '../components/Postmail'
+	import Postmail from '../components/stateful/Postmail'
 
 	export default {
 		name:       'EmailUsPage',

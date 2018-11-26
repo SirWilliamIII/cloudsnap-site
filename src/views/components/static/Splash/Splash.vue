@@ -26,7 +26,7 @@
 
 
 <script>
-	import SignUpBtn from '../../buttons/SignUpBtn'
+	import SignUpBtn from '../buttons/SignUpBtn'
 	import SplashImg from './SplashImage'
 	import SplashText from './SplashHeading'
 
