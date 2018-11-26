@@ -1,37 +1,38 @@
 <template>
-	<div>
-		<form action="https://postmail.invotes.com/send"
-    method="post" id="email_form">
+	<div class="contact-form">
+		<div class="row">
+			<div class="col-md-12">
+				<form action="https://postmail.invotes.com/send" method="post" id="email_form">
+					<h1 class="title">Email Us</h1>
 
-    <input type="text" name="subject" placeholder="Subject" />
-    <textarea name="text" placeholder="Message"></textarea>
-    <input type="hidden" name="access_token" value="geuvzcp1zvzd52yx9u3qw54q" />
-      <!-- return urls can be fully qualified -OR-
-         start with / for root relative -OR-
-         start with . for url relative -->
-    <input type="hidden" name="success_url" value="/#/thanks" />
-    <input type="hidden" name="error_url" value="/#/error/" />
+					<!-- Access Token for Postmail -->
+					<input type="hidden" name="access_token" value="geuvzcp1zvzd52yx9u3qw54q" />
+					<!-- INPUTS -->
+					<div class="row">
+						<input class="inputWidth" type="email" name="will@cloudsnap.com"
+						       placeholder="Your email address"
+						       required />
 
+						<input class="inputWidth" type="text" name="subject" placeholder="Subject" required />
 
+						<textarea class="inputWidth" name="text" placeholder="Message" rows="4" required></textarea>
 
-			<!-- set the reply-to address -->
-			<input type="text" name="will@cloudsnap.com"
-			       placeholder="Email" />
+						<input id="submitForm" type="submit" value="Send" class="btn inputWidth" />
+					</div>
+					<!-- INPUTS END-->
 
-			<!-- to append extra fields, use the extra_ prefix.
-				Entries will be appended to your message body. -->
-			<!-- <input type="text" name="extra_phone_number"
-						placeholder="Phone Number" /> -->
+					<!-- return urls can be fully qualified -OR-
+					   start with / for root relative -OR-
+					   start with . for url relative -->
+					<input type="hidden" name="success_url" value="/#/thanks" />
+					<input type="hidden" name="error_url" value="/#/error/" />
+				</form>
 
-			<!-- to split your message into 160 chars
-				 for an sms gateway -->
-			<!-- <input type="hidden"
-						name="sms_format" value="true" /> -->
-
-			<input id="submitForm" type="submit" value="Send" />
-		</form>
-
+			</div>
+		</div>
 	</div>
+
+
 </template>
 
 <script>
@@ -40,6 +41,11 @@
 
 	export default {
 		name: 'Postmail',
+		data() {
+			return {
+				emailValue: ''
+			}
+		},
 		created() {
 			const submitButton = document.getElementById("submitForm")
 			form.addEventListener("submit", function (e) {
@@ -52,5 +58,57 @@
 	}
 </script>
 
-<style>
+<style scoped>
+	#submitForm {
+		background-color: #ff5128;
+		font-weight:      700;
+		color:            #ccc;
+		border-radius:    10px;
+		font-size:        24px;
+		padding:          15px;
+		width:            600px;
+	}
+
+	#submitForm:hover {
+		background-color: #ff3100;
+		color:            #fff;
+	}
+
+	.title {
+		color:          #fff;
+		font-size:      54px;
+		padding-bottom: 30px;
+		margin-top: 60px;
+
+	}
+
+	.inputWidth {
+		width: 600px;
+	}
+
+	@media only screen and (max-width: 768px) {
+
+		.title {
+			color:          #fff;
+			font-size:      36px;
+			padding-bottom: 15px;
+			margin-left:    120px;
+			margin-top:     30px;
+		}
+
+		.inputWidth {
+			width:       240px;
+			margin-left: 80px;
+		}
+
+		#submitForm {
+
+			border-radius: 10px;
+			font-size:     18px;
+			padding:       10px;
+			width:         240px;
+		}
+
+	}
+
 </style>

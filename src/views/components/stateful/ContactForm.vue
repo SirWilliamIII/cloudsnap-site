@@ -12,9 +12,7 @@
 					{{ cloudsnap.successMessageSub }}
 				</p>
 
-
 				<div v-if="!messageSent" class="separator"></div>
-
 
 				<div v-if="isSending" class="loading">Delivering Message...</div>
 				<form v-if="!messageSent" class="form" @submit.prevent="handleSubmit" id="submitForm">

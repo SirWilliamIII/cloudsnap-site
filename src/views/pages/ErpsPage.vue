@@ -5,7 +5,6 @@
 			<!-- TEMPLATE HERE-->
 			<h1>ERPs Page</h1>
 
-			<Postmail />
 			<!-- END -->
 		</div>
 		<Footer />
@@ -15,12 +14,11 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
-	import Postmail from '../components/Postmail'
 
 	export default {
 		name:       'ErpsPage',
 		components: {
-			Navbar, Footer, Postmail
+			Navbar, Footer
 		}
 	}
 </script>

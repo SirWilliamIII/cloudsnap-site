@@ -8,6 +8,7 @@ import ErpsPage from '../views/pages/ErpsPage'
 import ContactPage from '../views/pages/ContactPage'
 import ThanksPage from '../views/pages/ThanksPage'
 import ErrorPage from '../views/pages/ErrorPage'
+import PostmailPage from '../views/pages/EmailUsPage'
 
 
 Vue.use(VueRouter)
@@ -37,6 +38,9 @@ const routes = [
 	}, {
 		path: '/error',
 		component: ErrorPage
+	}, {
+		path: '/email',
+		component: PostmailPage
 	}
 ]
 

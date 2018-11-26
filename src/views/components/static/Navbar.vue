@@ -20,6 +20,9 @@
 							<router-link to="apps" class="nav-link">Apps</router-link>
 						</div>
 						<div class="nav-item">
+							<router-link to="email" class="nav-link">Email</router-link>
+						</div>
+						<div class="nav-item">
 							<router-link to="signup" class="nav-link">Sign Up</router-link>
 						</div>
 						<div class="nav-item">
@@ -117,10 +120,6 @@
 		color:       #fff;
 		font-weight: 300;
 		font-size:   22px;
-	}
-
-	#apps {
-		text-align: center;
 	}
 
 	@media only screen and (max-width: 768px) {

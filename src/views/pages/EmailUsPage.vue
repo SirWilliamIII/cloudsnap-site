@@ -3,7 +3,7 @@
 		<Navbar />
 		<div id="content">
 			<!-- TEMPLATE HERE-->
-			<h1>About Page</h1>
+			<Postmail />
 			<!-- END -->
 		</div>
 		<Footer />
@@ -13,12 +13,12 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
-import Postmail from '../components/Postmail'
+	import Postmail from '../components/Postmail'
 
 	export default {
-		name:       'AboutPage',
+		name:       'EmailUsPage',
 		components: {
-			Navbar, Footer
+			Navbar, Footer, Postmail
 		}
 	}
 </script>
