@@ -1,10 +1,10 @@
 <template>
 	<div id="bg">
 		<Navbar />
-		<div id="content">
+		<div id="content" class="text-center">
 			<!-- TEMPLATE HERE-->
-			<AppLibrary />
-			<!-- END -->
+			<h1>App Library</h1>
+			<AppCards />
 		</div>
 		<Footer />
 	</div>
@@ -13,12 +13,12 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
-	import AppLibrary from '../components/stateful/AppLibraryApps'
+	import AppCards from '../components/stateful/AppLibraryCards'
 
 	export default {
 		name:       'AppsPage',
 		components: {
-			Navbar, Footer, AppLibrary
+			Navbar, Footer, AppCards
 		}
 	}
 </script>
@@ -34,6 +34,6 @@
 	}
 
 	#content {
-		margin-top: 150px;
+		margin-top: 100px;
 	}
 </style>
