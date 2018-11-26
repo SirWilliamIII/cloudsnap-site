@@ -5,6 +5,12 @@ import router from './router/index'
 import VueIntercom from 'vue-intercom';
 Vue.use(VueIntercom, { appId: 'qrls8x48' });
 
+import VueAnalytics from 'vue-analytics'
+Vue.use(VueAnalytics, {
+	id: 'UA-128386238-1',
+	router
+})
+
 
 
 import 'bootstrap'
