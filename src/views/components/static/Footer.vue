@@ -47,7 +47,7 @@
 </script>
 
 
-<style scoped>
+<style>
 	footer {
 		background-color: rgba(0, 0, 0, 0);
 		font-weight:      100;

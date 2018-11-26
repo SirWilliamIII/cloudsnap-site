@@ -2,6 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index'
 
+import VueIntercom from 'vue-intercom';
+Vue.use(VueIntercom, { appId: 'qrls8x48' });
+
+
 
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'

@@ -52,9 +52,9 @@
 	}
 
 	.appLogos {
-		max-width:  200px;
-		max-height: 200px;
-		padding:    20px;
+		max-width:  180px;
+		max-height: 180px;
+		padding:    25px;
 	}
 
 	#app-list {

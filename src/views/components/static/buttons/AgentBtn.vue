@@ -22,4 +22,8 @@
 		background-color: #0473a3;
 		color:            #fff;
 	}
+
+	@media only screen and (max-width: 768px) {
+
+	}
 </style>

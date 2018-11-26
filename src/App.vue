@@ -9,33 +9,63 @@
 
 	export default {
 		name:    'app',
+		data() {
+			return {
+				userId: 1,
+				name:   'Foo Bar',
+				email:  'foo@bar.com'
+			}
+		},
+		mounted() {
+			this.$intercom.boot({
+				user_id: this.userId,
+				name:    this.name,
+				email:   this.email
+			});
+			this.$intercom.show();
+		},
+		watch:   {
+			email(email) {
+				this.$intercom.update({ email });
+			}
+		},
 		methods: {
-			handleScroll: e => {
+			handleScroll(e) {
+				// document == main object of rendered DOM
+				// window == root object == gets loaded first in browser == visible part in browser
+				// window props: length, innerWidth, innerHeight
+
 				e.preventDefault()
 				const nav = document.getElementById('nav-bar')
+				let currentScrollPos = window.pageYOffset
+				let innerHeight = window.innerHeight
+				let bodyHeight = document.body.offsetHeight
 
-
-				let currentScrollPos = window.pageYOffset;
-				if(prevScrollpos > currentScrollPos) {
+				if((innerHeight + currentScrollPos) >= bodyHeight) {
+					nav.style.top = '0'
+				} else if(prevScrollpos > currentScrollPos) {
 					console.log(nav.style.top)
-					nav.style.top = "0"
+					nav.style.top = '0'
 				} else {
-					nav.style.top = "-95px"
+					nav.style.top = '-95px'
 				}
 				prevScrollpos = currentScrollPos;
-				if(prevScrollpos > "95") {
-					nav.style.backgroundColor = "#333"
+				if(prevScrollpos > '95') {
+					nav.style.backgroundColor = '#333'
 				} else {
-					nav.style.backgroundColor = "rgba(0,0,0,0)"
+					nav.style.backgroundColor = 'rgba(0, 0, 0, 0)'
 				}
 			}
 		},
 
-		created:   function () {
-			window.addEventListener('scroll', this.handleScroll);
+		created() {
+			window.Intercom("boot", {
+				app_id: "qrls8x48"
+			})
+			window.addEventListener('scroll', this.handleScroll)
 		},
-		destroyed: function () {
-			window.removeEventListener('scroll', this.handleScroll);
+		destroyed() {
+			window.removeEventListener('scroll', this.handleScroll)
 		}
 	}
 </script>
@@ -49,7 +79,7 @@
 	h4,
 	h5,
 	p {
-		font-family:           'lato';
+		font-family:           'lato', "Avenir Next", sans-serif;
 		font-feature-settings: "liga" 0;
 	}
 
@@ -75,6 +105,5 @@
 		color:                   #333;
 		background:              url("assets/images/various/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#52B9E6), to(#0473A3));
 		background:              url("assets/images/various/bg-pattern.png"), linear-gradient(to left, #52B9E6, #0473A3);
-
 	}
 </style>

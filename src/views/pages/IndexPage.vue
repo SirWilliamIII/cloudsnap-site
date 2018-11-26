@@ -9,6 +9,8 @@
 
 			<Agent />
 
+			<ContactSection />
+
 			<!-- END -->
 		</div>
 		<Footer />
@@ -22,11 +24,13 @@
 	import AppList from '../components/static/AppList'
 	import Features from '../components/static/Features'
 	import Agent from '../components/static/Agent'
+	import ContactSection from '../components/static/ContactSection'
+
 
 	export default {
 		name:       'IndexPage',
 		components: {
-			Navbar, Footer, Splash, AppList, Features, Agent
+			Navbar, Footer, Splash, AppList, Features, Agent, ContactSection
 		}
 	}
 </script>
@@ -42,6 +46,10 @@
 
 	#content {
 		margin-top: 80px;
+	}
+
+	Footer {
+		background-color: #ABABAB;
 	}
 
 	@media only screen and (max-width: 768px) {
