@@ -22,11 +22,11 @@
 				name:    this.name,
 				email:   this.email
 			});
-			this.$intercom.show();
+			this.$intercom.show()
 		},
 		watch:   {
 			email(email) {
-				this.$intercom.update({ email });
+				this.$intercom.update({ email })
 			}
 		},
 		methods: {
