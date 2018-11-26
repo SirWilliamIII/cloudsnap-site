@@ -12,8 +12,8 @@
 		data() {
 			return {
 				userId: 1,
-				name:   'Foo Bar',
-				email:  'foo@bar.com'
+				name:   'Cloudsnap',
+				email:  'sales@cloudsnap.com'
 			}
 		},
 		mounted() {
