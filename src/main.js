@@ -11,6 +11,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 
+import AOS from 'aos'
+
+
 Vue.use(VeeValidate)
 Vue.use(VueIntercom, { appId: 'qrls8x48' })
 
@@ -27,6 +30,9 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
 new Vue({
+	created() {
+		AOS.init()
+	},
 	render:     h => h(App),
 	el:         "#app",
 	name:       'app',

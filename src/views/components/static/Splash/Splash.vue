@@ -1,7 +1,7 @@
 <template>
 	<header id="splash">
-		<div class="container h-100">
-			<div class="row h-100">
+		<div class="container" id="splashContainer">
+			<div class="row" id="splashRow">
 				<div class="col-md-5">
 					<div class="header-content">
 						<SplashText />
@@ -57,7 +57,6 @@
 
 	.header-content {
 		color: #fff;
-		margin-bottom: 50px;
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -75,6 +74,13 @@
 		#signUpBtn {
 			visibility: visible;
 		}
+		#splashContainer {
+			height: 100%;
+		}
+		#splashRow {
+			height: 100%;
+		}
+
 
 	}
 </style>

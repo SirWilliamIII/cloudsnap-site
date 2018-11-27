@@ -201,7 +201,6 @@
 
 	#configurableBlock {
 		background-color: #fff;
-		border-top:       1px solid #333;
 	}
 
 	#agentTitleWrapper {

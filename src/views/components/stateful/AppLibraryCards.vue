@@ -1,17 +1,19 @@
 <template>
 	<div class="container">
 		<div class="row">
-			<div v-for="app in apps" :key="apps[app]" class="col-md-4 mb-4">
+			<div class="col-md-4 mb-4" v-for="app in apps" :key="apps[app]" data-aos="zoom-in" data-aos-duration="800">
 				<div class="card h-100">
 					<div class="card-body">
 						<h2 class="card-title">
 							{{ app.name }}
 						</h2>
-						<div class="card-img">
+						<div class="card-img" data-aos="flip-up" data-aos-duration="200">
 							<img :src="app.icon.url" alt="img" class="card-img-top" id="appIcon" />
 						</div>
-						<div class="card-footer">
+						<div class="card-text">
 							<p>{{ (app.description).slice(0,80) }}</p>
+						</div>
+						<div class="card-footer">
 							<p>
 								<small>Last Updated: {{ (app.created_at).slice(0, 10) }}</small>
 							</p>

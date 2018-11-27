@@ -1,6 +1,7 @@
 <template>
-	<div class="text-white section_block large" id="features">
-		<div class="container">
+	<div id="features">
+		<div class="container" data-aos="slide-right" data-aos-offset="200" data-aos-easing="ease-in-sine"
+		     data-aos-duration="600">
 			<div class="row text-center" id="features-block">
 				<div class="col-md-3 col-6" v-for="icon in icons" v-bind:key="icons[icon]">
 					<img :src="icon.img" class="features-icon">
