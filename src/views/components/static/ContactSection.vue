@@ -3,16 +3,16 @@
 		<div class="cta-content">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 offset-md-1 my-auto" id="stopWrapper">
-						<h1 id="stop-waiting">
+					<div class="col-md-4 offset-1 my-auto" id="stopWrapper">
+						<h1 class="stopWaiting">
 							<strong>Stop</strong> waiting. <br>
 						</h1>
 						<br>
-						<h1 id="stop-waiting2">
+						<h1 class="stopWaiting">
 							<strong>Start</strong> building.
 						</h1>
 					</div>
-					<div class="col-md-5 " id="postmailWrapper">
+					<div class="col-md-5 offset-1" id="postmailWrapper">
 						<Postmail />
 					</div>
 
@@ -73,22 +73,12 @@
 		z-index:  1;
 	}
 
-	.cta .cta-content h2 {
-		font-size:     50px;
+	.stopWaiting {
+		font-size: 80px;
+		color:     #fff;
 		max-width:     450px;
-		margin-top:    0;
+		margin-top:    30px;
 		margin-bottom: 25px;
-		color:         white;
-	}
-
-	#stop-waiting {
-		font-size: 70px;
-		color:     #fff;
-	}
-
-	#stop-waiting2 {
-		font-size: 70px;
-		color:     #fff;
 	}
 
 	#postmailWrapper {

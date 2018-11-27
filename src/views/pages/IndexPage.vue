@@ -6,11 +6,8 @@
 			<Splash />
 			<Features />
 			<AppList />
-
 			<Agent />
-
 			<ContactSection />
-
 			<!-- END -->
 		</div>
 		<Footer />

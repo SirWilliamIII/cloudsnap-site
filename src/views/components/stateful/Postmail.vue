@@ -1,8 +1,7 @@
 <template>
 	<div class="contact-form">
 		<form action="https://postmail.invotes.com/send" method="post" id="email_form">
-			<h1 class="title">Email Us</h1>
-
+			<h1 id="formTitle">Email Us</h1>
 			<!-- Access Token for Postmail -->
 			<input type="hidden" name="access_token" value="geuvzcp1zvzd52yx9u3qw54q" />
 			<!-- INPUTS -->
@@ -19,9 +18,7 @@
 			</div>
 			<!-- INPUTS END-->
 
-			<!-- return urls can be fully qualified -OR-
-			   start with / for root relative -OR-
-			   start with . for url relative -->
+
 			<input type="hidden" name="success_url" value="/#/thanks" />
 			<input type="hidden" name="error_url" value="/#/error/" />
 		</form>
@@ -59,8 +56,9 @@
 		color:            #ccc;
 		border-radius:    10px;
 		font-size:        24px;
-		padding:          15px;
 		width:            600px;
+		margin-top:       10px;
+		padding:          20px;
 	}
 
 	#submitForm:hover {
@@ -68,12 +66,11 @@
 		color:            #fff;
 	}
 
-	.title {
-		color:          #fff;
-		font-size:      54px;
-		padding-bottom: 30px;
-		margin-top:     60px;
-
+	#formTitle {
+		color:         #fff;
+		font-size:     66px;
+		margin-bottom: 20px;
+		margin-top:    30px;
 	}
 
 	.inputWidth {
@@ -81,28 +78,23 @@
 	}
 
 	@media only screen and (max-width: 768px) {
-
-		.title {
+		#formTitle {
 			color:          #fff;
-			font-size:      36px;
-			padding-bottom: 15px;
-			margin-left:    120px;
-			margin-top:     30px;
+			font-size:      44px;
+			padding-bottom: 10px;
+			padding-top:    10px;
 		}
 
 		.inputWidth {
-			width:       240px;
-			margin-left: 80px;
 		}
 
 		#submitForm {
-
-			border-radius: 10px;
-			font-size:     18px;
-			padding:       10px;
-			width:         240px;
+			font-size:  18px;
+			margin-top: 10px;
 		}
 
+		#email_form {
+			margin-right: 40px;
+		}
 	}
-
 </style>

@@ -3,7 +3,7 @@
 <template>
 	<div>
 		<nav id="nav-bar" class="navbar navbar-expand-md">
-			<div class="container" style="display: flex;">
+			<div class="container" style="display: flex;" id="navWrapper">
 				<Logo class="navbar-brand" />
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 				        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -12,6 +12,7 @@
 					</font-awesome-icon>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
+
 					<div class="nav navbar-nav ml-auto">
 						<div class="nav-item">
 							<router-link to="about" class="nav-link">About</router-link>
@@ -83,8 +84,8 @@
 	}
 
 	#nav-bar .navbar-toggler {
-		font-size: 18px;
-		padding:   22px 20px;
+		font-size: 20px;
+		padding:   26px 20px;
 		color:     #333;
 	}
 
@@ -126,16 +127,16 @@
 
 		.nav-link {
 			color: #fff;
+			background-color: #333;
 		}
 
 		.nav-link:hover {
-			color: #aaa;
+			color: #333;
 		}
 
 		#navPhoneNumWrapper {
 			display: none;
 		}
-
 	}
 
 </style>

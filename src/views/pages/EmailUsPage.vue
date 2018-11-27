@@ -3,7 +3,14 @@
 		<Navbar />
 		<div id="content">
 			<!-- TEMPLATE HERE-->
-			<Postmail />
+			<div class="container" id="mailWrapper">
+				<div class="row">
+					<div class="col-lg-12">
+						<Postmail />
+					</div>
+				</div>
+			</div>
+
 			<!-- END -->
 		</div>
 		<Footer />
@@ -36,4 +43,5 @@
 	#content {
 		margin-top: 80px;
 	}
+
 </style>

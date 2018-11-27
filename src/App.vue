@@ -59,13 +59,16 @@
 		},
 
 		created() {
+			window.addEventListener('scroll', this.handleScroll)
 			window.Intercom("boot", {
 				app_id: "qrls8x48"
 			})
-			window.addEventListener('scroll', this.handleScroll)
+
 		},
 		destroyed() {
+			window.Intercom("shutdown")
 			window.removeEventListener('scroll', this.handleScroll)
+
 		}
 	}
 </script>
@@ -99,7 +102,7 @@
 		flex-direction:          column;
 		overflow-x:              hidden;
 
-		font-family:             'Lato', Arial, sans-serif;
+		font-family:             'Lato', 'Avenir Next', Arial, sans-serif;
 		-webkit-font-smoothing:  antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		color:                   #333;

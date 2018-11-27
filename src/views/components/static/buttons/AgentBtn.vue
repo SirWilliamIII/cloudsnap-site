@@ -1,5 +1,7 @@
 <template>
-	<router-link to="agent" class="btn" id="agent-button">Learn about the Cloudsnap Agent</router-link>
+	<div class="btnWrapper">
+		<router-link to="agent" class="btn" id="agent-button">Learn about our Agent</router-link>
+	</div>
 </template>
 
 <script>
@@ -11,11 +13,12 @@
 <style>
 	#agent-button {
 		background-color: #2caae0;
-		font-size:        22px;
+		font-size:        26px;
 		border-radius:    10px;
 		font-weight:      700;
 		padding:          20px;
 		color:            #ccc;
+		margin-top: 10px;
 	}
 
 	#agent-button:hover {
@@ -24,6 +27,8 @@
 	}
 
 	@media only screen and (max-width: 768px) {
-
+		#agent-button {
+			font-size: 18px;
+		}
 	}
 </style>
