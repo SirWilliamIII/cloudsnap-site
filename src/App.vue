@@ -9,29 +9,19 @@
 	const app_id = 'qrls8x48'
 	export default {
 		name:      'app',
-		data() {
-			return {
-				userId: 1,
-				name:   '',
-				email:  ''
-			}
-		},
 		created() {
-			Intercom("boot", { app_id })
+			Intercom('boot', {app_id})
 			window.addEventListener('scroll', this.handleScroll)
 		},
 		mounted() {
 			Intercom("boot", {
-				app_id,
-				user_id: this.userId,
-				name:    this.name,
-				email:   this.email
+				app_id
 			})
 			Intercom("show")
 		},
 		watch:     {
-			email: mail => {
-				Intercom("update", { mail })
+			email: email => {
+				Intercom("update", { email })
 			}
 		},
 		methods:   {
