@@ -6,6 +6,7 @@
 
 <script>
 	let prevScrollpos = window.pageYOffset;
+	const ic = Intercom
 
 	export default {
 		name:    'app',
@@ -16,23 +17,31 @@
 				email:  'sales@cloudsnap.com'
 			}
 		},
+		created() {
+			window.addEventListener('scroll', this.handleScroll)
+		},
 		mounted() {
-			this.$intercom.boot({
+			ic("boot", {
+				app_id:  "qrls8x48",
 				user_id: this.userId,
 				name:    this.name,
 				email:   this.email
-			});
-			this.$intercom.show()
+			})
+
+			ic("show")
 		},
 		watch:   {
 			email(email) {
-				this.$intercom.update({ email })
+				ic("update", { email })
 			}
+		},
+		beforeRouteUpdate() {
+			ic("update")
 		},
 		methods: {
 			handleScroll(e) {
-				// document == main object of rendered DOM
-				// window == root object == gets loaded first in browser == visible part in browser
+				// document -> main object of rendered DOM
+				// window === root object === gets loaded first in browser === visible part in browser
 				// window props: length, innerWidth, innerHeight
 
 				e.preventDefault()
@@ -57,18 +66,9 @@
 				}
 			}
 		},
-
-		created() {
-			window.addEventListener('scroll', this.handleScroll)
-			window.Intercom("boot", {
-				app_id: "qrls8x48"
-			})
-
-		},
 		destroyed() {
-			window.Intercom("shutdown")
+			ic('shutdown')
 			window.removeEventListener('scroll', this.handleScroll)
-
 		}
 	}
 </script>
@@ -108,5 +108,6 @@
 		color:                   #333;
 		background:              url("assets/images/various/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#52B9E6), to(#0473A3));
 		background:              url("assets/images/various/bg-pattern.png"), linear-gradient(to left, #52B9E6, #0473A3);
+
 	}
 </style>

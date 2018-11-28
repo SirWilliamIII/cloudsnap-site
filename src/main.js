@@ -5,7 +5,6 @@ import VueAnalytics from 'vue-analytics'
 import VeeValidate from 'vee-validate'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import VueIntercom from 'vue-intercom';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -13,10 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 
 import AOS from 'aos'
 
-
 Vue.use(VeeValidate)
-Vue.use(VueIntercom, { appId: 'qrls8x48' })
-
 
 Vue.use(VueAnalytics, {
 	id: 'UA-128386238-1',
