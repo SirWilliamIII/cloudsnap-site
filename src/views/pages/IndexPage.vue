@@ -46,7 +46,7 @@
 	}
 
 	Footer {
-		background-color: #ABABAB;
+		background-color: #2CAAE0;
 	}
 
 	@media only screen and (max-width: 768px) {

@@ -6,40 +6,37 @@
 
 <script>
 	let prevScrollpos = window.pageYOffset;
-	const ic = Intercom
+
 
 	export default {
 		name:    'app',
 		data() {
 			return {
 				userId: 1,
-				name:   'Cloudsnap',
-				email:  'sales@cloudsnap.com'
+				name:   'user',
+				email:  'user@email.com'
 			}
 		},
 		created() {
 			window.addEventListener('scroll', this.handleScroll)
 		},
 		mounted() {
-			ic("boot", {
+
+			Intercom("boot", {
 				app_id:  "qrls8x48",
 				user_id: this.userId,
 				name:    this.name,
 				email:   this.email
 			})
-
-			ic("show")
+			Intercom("show")
 		},
 		watch:   {
-			email(email) {
-				ic("update", { email })
+			email: mail => {
+				Intercom("update", { mail })
 			}
 		},
-		beforeRouteUpdate() {
-			ic("update")
-		},
 		methods: {
-			handleScroll(e) {
+			handleScroll: e => {
 				// document -> main object of rendered DOM
 				// window === root object === gets loaded first in browser === visible part in browser
 				// window props: length, innerWidth, innerHeight
@@ -47,13 +44,11 @@
 				e.preventDefault()
 				const nav = document.getElementById('nav-bar')
 				let currentScrollPos = window.pageYOffset
-				let innerHeight = window.innerHeight
 				let bodyHeight = document.body.offsetHeight
 
-				if((innerHeight + currentScrollPos) >= bodyHeight) {
+				if((innerHeight + currentScrollPos) >= bodyHeight-2) {
 					nav.style.top = '0'
 				} else if(prevScrollpos > currentScrollPos) {
-					console.log(nav.style.top)
 					nav.style.top = '0'
 				} else {
 					nav.style.top = '-95px'
@@ -66,8 +61,8 @@
 				}
 			}
 		},
-		destroyed() {
-			ic('shutdown')
+		destroyed: () => {
+			Intercom('shutdown')
 			window.removeEventListener('scroll', this.handleScroll)
 		}
 	}
@@ -108,6 +103,5 @@
 		color:                   #333;
 		background:              url("assets/images/various/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#52B9E6), to(#0473A3));
 		background:              url("assets/images/various/bg-pattern.png"), linear-gradient(to left, #52B9E6, #0473A3);
-
 	}
 </style>

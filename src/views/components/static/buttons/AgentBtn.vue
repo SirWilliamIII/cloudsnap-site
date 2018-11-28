@@ -13,10 +13,10 @@
 <style>
 	#agent-button {
 		background-color: #2caae0;
-		font-size:        26px;
+		font-size:        24px;
 		border-radius:    10px;
 		font-weight:      700;
-		padding:          20px;
+		padding:          25px;
 		color:            #ccc;
 		margin-top: 10px;
 	}

@@ -3,7 +3,7 @@
 		<div class="container" data-aos="slide-right" data-aos-offset="200" data-aos-easing="ease-in-sine"
 		     data-aos-duration="600">
 			<div class="row text-center" id="features-block">
-				<div class="col-md-3 col-6" v-for="icon in icons" v-bind:key="icons[icon]">
+				<div class="col-md-3 col-6" v-for="icon in icons" v-bind:key="icons[icon]" >
 					<img :src="icon.img" class="features-icon">
 					<h2 class="dark-text" id="iconTitle">{{ icon.title }}</h2>
 					<p class="dark-text" id="iconSubtitle">{{ icon.subtitle }}</p>
@@ -55,6 +55,7 @@
 	#features {
 		background-color: #FFC228;
 		padding-bottom:   50px;
+		height: 50vh;
 	}
 
 	.features-icon {

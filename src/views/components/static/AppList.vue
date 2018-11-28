@@ -1,9 +1,16 @@
 <template>
 	<div id="appLogosWrapper">
-		<div class="container">
+		<div class="container" id="appLogosContainer">
 			<div class="row text-center mx-auto" id="app-list">
 				<div class="col-md-4 col-sm-6 my-auto" v-for="logo in logos" v-bind:key="logos[logo]">
 					<img :src="logo.img" class="appLogos" />
+				</div>
+			</div>
+			<div class="row mx-auto">
+				<div class="col-md-4 offset-md-4 col-xs-8 text-center">
+					<router-link to="apps">
+						<AppLibBtn />
+					</router-link>
 				</div>
 			</div>
 		</div>
@@ -18,6 +25,8 @@
 	import shopify from '../../../assets/images/logos/shopify-logo-wide.png'
 	import sap from '../../../assets/images/logos/sap-logo.png'
 
+	import AppLibBtn from './buttons/AppLibBtn'
+
 	const logos = [
 		{ img: concur },
 		{ img: salesforce },
@@ -28,9 +37,12 @@
 	]
 
 	export default {
-		name: 'logos',
+		name:       'logos',
 		data() {
 			return { logos }
+		},
+		components: {
+			AppLibBtn
 		}
 	}
 </script>
@@ -40,24 +52,33 @@
 	#appLogosWrapper {
 		background-size: cover;
 		background:      url("../../../assets/images/various/white-bg.jpg") center;
-		padding:         20px 0 40px;
 		position:        relative;
+		height:          50vh;
+
 	}
 
-	@media only screen and (max-width: 768px) {
-		#appLogosWrapper {
-			padding-top: 20px;
-			height:  100vh;
-		}
+	#appLogosContainer {
+		margin-top: 100px;
 	}
 
 	.appLogos {
-		max-width:  180px;
-		max-height: 180px;
+		max-width:  200px;
+		max-height: 200px;
 		padding:    25px;
 	}
 
 	#app-list {
 		list-style: none;
+	}
+
+	@media only screen and (max-width: 768px) {
+		#appLogosWrapper {
+			padding-top: 20px;
+			height:      120vh;
+		}
+
+		#appLogosContainer {
+			margin-top: 0;
+		}
 	}
 </style>

@@ -41,7 +41,7 @@
 		background:      url('../../../assets/images/various/prem_bg.jpg') center;
 		position:        relative;
 		text-align:      center;
-		height:          100vh;
+		height:          70vh;
 	}
 
 	#premWrapper {
@@ -91,6 +91,10 @@
 		.sectionText {
 			font-size:  15px;
 			margin-top: 15px;
+		}
+
+		#prem {
+			height: 100vh;
 		}
 	}
 </style>

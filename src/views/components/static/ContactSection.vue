@@ -12,8 +12,9 @@
 							<strong>Start</strong> building.
 						</h1>
 					</div>
-					<div class="col-md-5 offset-1" id="postmailWrapper" data-aos="flip-up" data-aos-duration="400">
-						<Postmail data-aos="slide-left"  data-aos-duration="600"/>
+					<div class="col-md-5 offset-md-1 col-xs-10 offset-xs-1" id="postmailWrapper" data-aos="flip-up"
+					     data-aos-duration="400">
+						<Postmail data-aos="slide-left" data-aos-duration="600" />
 					</div>
 
 					<!--<div class="col-md-5 offset-md-1 text-center">-->
@@ -43,7 +44,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="overlay"></div>
+
 	</section>
 </template>
 
@@ -67,10 +68,9 @@
 	.cta {
 		position:        relative;
 		padding:         150px 0;
-		background:      #7F7F7F center;
+		background:      #2CAAE0 center;
 		background-size: cover;
-		height:          100vh;
-
+		height:          80vh;
 	}
 
 	.cta .cta-content {
@@ -88,11 +88,13 @@
 
 	#postmailWrapper {
 		margin-right: 50px;
+		background: rgba(0,0,0,0);
 	}
 
 	@media only screen and (max-width: 768px) {
 		.cta {
-			padding: 50px;
+			padding: 0;
+			height:  90vh;
 		}
 
 		#stopWrapper {
@@ -100,7 +102,10 @@
 		}
 
 		#postmailWrapper {
-			text-align: center;
+			margin-left:  20px;
+			margin-right: auto;
+			margin-top: 80px;
+			text-align:   center;
 		}
 
 	}

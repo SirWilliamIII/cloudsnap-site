@@ -1,27 +1,27 @@
 <template>
-	<a href="#" class="btn" id="app-btn">
+	<div id="appBtn">
 		View complete library
-	</a>
+	</div>
 </template>
 
 <script>
 export default {
-	name: 'app-btn'
+	name: 'appBtn'
 }
 </script>
 
 <style scoped>
-	#app-btn {
+	#appBtn {
 		background-color: #2caae0;
 		padding:          20px;
 		border-radius:    10px;
 		font-weight:      700;
 		font-size:        22px;
-		color:            #ccc;
+		color:            #fff;
 	}
 
-	#app-btn:hover {
+	#appBtn:hover {
 		background-color: #0473a3;
-		color: #fff;
+		color: #ccc;
 	}
 </style>

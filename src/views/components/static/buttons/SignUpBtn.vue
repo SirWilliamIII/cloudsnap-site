@@ -10,7 +10,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	#sign-up-btn {
 		background-color: #ff5128;
 		font-weight:      700;
