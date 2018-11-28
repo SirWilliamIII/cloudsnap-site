@@ -3,8 +3,8 @@
 		<Navbar />
 		<div id="content">
 			<!-- TEMPLATE HERE-->
+<SignUpForm />
 
-			<SignUpForm />
 
 			<!-- END -->
 		</div>
@@ -15,7 +15,7 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
-	import SignUpForm from '../components/static/SignUp/SignUpForm'
+	import SignUpForm from '../components/stateful/SignUp/SignUpForm'
 
 	export default {
 		name:       'SignupPage',
@@ -39,5 +39,4 @@
 	#content {
 		margin-top: 100px;
 	}
-
 </style>

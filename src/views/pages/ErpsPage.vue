@@ -1,74 +1,58 @@
 <template>
 	<div id="bg">
 		<Navbar />
-		<div id="body">
+		<div id="content">
 			<!-- TEMPLATE HERE-->
-			<main class="content">
-				<!--<div class="container">-->
-					<!--<div class="row">-->
-						<!--<div class="col-md-12 col-xs-12">-->
-							<!--<img src="../../assets/images/logos/concur-logo-wide-black.png"-->
-							     <!--id="coLogo"-->
-							     <!--class="img-fluid" />-->
-						<!--</div>-->
-					<!--</div>-->
-				<!--</div>-->
-				<div class="container" style="margin-top: -20px;">
-                <br>
-                <h2 class="section_header">Partner Benefits</h2>
-                <hr>
-                <h3 style="color: #2CAAE0">API Connections</h3>
-                <p>
-                    Unleash the power of your data and allow your applications to talk to each other with Cloudsnap platform. Remove barriers within your organization and allow information to be easily shared and consumed. Eliminate error-prone business processes such as
-                    excel exports that are manually reimported into other apps.
-                </p>
-                <br>
 
-                <h3 style="color: #2CAAE0">Training data integration</h3>
-                <p>
-                    Seamlessly integrate your learning management system (LMS) with the rest of your applications. Allow your training data to flow freely into other HR applications. Save thousands of dollars by eliminating manual data entry.
-                </p>
-                <br>
-
-                <h3 style="color: #2CAAE0">Modernization of on-prem systems</h3>
-                <p>
-                    Rejuvenate legacy systems that are not easily connected to your newer applications. Cloudsnap is built with legacy systems in mind and has the features to build out these connections with ease. Let us save you millions in development costs when legacy
-                    integration is a must.
-                </p>
-                <br>
-
-                <h3 style="color: #2CAAE0">Integration with CRM apps</h3>
-                <p>
-                    Increase revenue by boosting the efficiency of your customer on-boarding process. Cloudsnap unleashes the functionality of apps like SalesForce and gives you the means to bring new customer data into your ERP, accounting package and project management
-                    software with ease.
-                </p>
-            </div>
-			</main>
-			<nav class="sideNav">
-				<ul style="list-style-type: none;">
-					<li class="partnerListItem">
-						Access to the Platform - which allows ability to test and build out custom connectors
-					</li>
-					<li class="partnerListItem">Discounted pricing</li>
-					<li class="partnerListItem">Dedicated sales and support resources</li>
-					<li class="partnerListItem">Monthly Webinars/Training</li>
-					<li class="partnerListItem">Knowledge Based Articles</li>
-					<li class="partnerListItem">Q&A Discussion Board</li>
-
-				</ul>
-			</nav>
-			<aside class="ads">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-xs-12">
-							<img src="../../assets/images/logos/concur-logo-wide-black.png"
-							     id="coLogo"
-							     class="img-fluid" />
-						</div>
+			<div class="row mx-auto" id="erpImgWrapper">
+				<div class="container-fluid text-center">
+					<div class="col-lg-12 col-xs-12">
+						<img :src="ErpImg" alt="erp" class="img-fluid" id="erpImg">
 					</div>
 				</div>
-			</aside>
+			</div>
+
+			<div class="row mx-auto">
+				<div class="sectionBlue">
+					<div class="container text-center">
+						<h3 id="otherTitle">Seamlessly automate data flow to and from your ERP</h3>
+						<p>
+							With the Cloudsnap platform, it is easy to integrate apps with your ERP. Whether it be a
+							cloud based CRM, an eCommerce site, an Expense Management System, or on-prem software, you
+							can seamlessly integrate each aspect of your business with Cloudsnap.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mx-auto">
+				<h3 id="midTitle">Immediately update data from anywhere to anywhere</h3>
+			</div>
 			<!-- END -->
+			<div class="container">
+				<div class="row mx-auto">
+					<div class="col-lg-3 offset-lg-1">
+						<img :src="SalesForceLogo" alt="sflogo" class="logos">
+					</div>
+					<div class="col-lg-6 offset-lg-1">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi architecto blanditiis
+						   cupiditate dicta ducimus, enim est fugit illo ipsa, labore laborum officiis perferendis
+						   praesentium quibusdam, quod ratione repudiandae voluptas.
+						</p>
+					</div>
+				</div>
+				<div class="row mx-auto">
+					<div class="col-lg-3 offset-lg-1 col-xs-8 offset-xs-2">
+						<img :src="ConcurLogo" alt="concurlogo" class="logos">
+					</div>
+					<div class="col-lg-6 offset-lg-1 col-xs-8 offset-xs-2">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi architecto blanditiis
+						   cupiditate dicta ducimus, enim est fugit illo ipsa, labore laborum officiis perferendis
+						   praesentium quibusdam, quod ratione repudiandae voluptas.
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 		<Footer />
 	</div>
@@ -77,18 +61,26 @@
 <script>
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
+	import ErpImg from '../../assets/images/various/erp-connect.png'
+	import SalesForceLogo from '../../assets/images/logos/salesforce-logo.png'
+	import ConcurLogo from '../../assets/images/logos/concur-logo-wide-black.png'
 
 	export default {
-		name:       'HGPage',
+		name:       'TemplatePage',
 		components: {
 			Navbar, Footer
+		},
+		data() {
+			return {
+				ErpImg, SalesForceLogo, ConcurLogo
+			}
 		}
 	}
 </script>
 
 <style scoped>
 
-	#bg, #body {
+	#bg, #content {
 
 		display:        flex;
 		flex-direction: column;
@@ -96,45 +88,57 @@
 		z-index:        0;
 	}
 
-	#body {
+	#content {
 		margin-top: 100px;
 	}
 
-	.content {
-		flex: 1;
+	#erpImgWrapper {
+		background-color: #fff;
+		width:            100%;
 	}
 
-	.sideNav, .ads {
-		/* 12em is the width of the columns */
-		flex: 0 0 12em;
+	#erpImg {
+		margin-top:    40px;
+		margin-bottom: 40px;
+		width:         1000px;
 	}
 
-	.sideNav {
-		/* put the nav on the left */
-		order: -1;
+	#midTitle {
+		font-weight: 300;
+		font-size:   36px;
+		margin:      30px;
 	}
 
-	#coLogo {
-		max-width: 400px;
+	.sectionBlue {
+		background-color: rgba(0, 0, 0, 0);
+		padding:          50px 0;
+		color:            #fff;
 	}
 
-	.partnerListItem {
-
+	.logos {
+		max-width: 200px;
+		min-width: 200px;
+		padding:   20px;
 	}
 
-	@media (min-width: 768px) {
-		#body {
-			flex-direction: row;
-			flex:           1;
+	@media only screen and (max-width: 768px) {
+
+		#midTitle {
+			color:       #333;
+			font-size:   44px;
+			font-weight: 400;
 		}
 
-		.content {
-			flex: 1;
+		#otherTitle {
+			font-size:     38px;
+			font-weight:   300;
+			margin-bottom: 40px;
 		}
 
-		.sideNav, .ads {
-			/* 12em is the width of the columns */
-			flex: 0 0 12em;
+		.logos {
+			max-width: 150px;
+			min-width: 150px;
+			padding:   10px;
 		}
 	}
 </style>
