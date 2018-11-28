@@ -6,36 +6,35 @@
 
 <script>
 	let prevScrollpos = window.pageYOffset;
-
-
+	const app_id = 'qrls8x48'
 	export default {
-		name:    'app',
+		name:      'app',
 		data() {
 			return {
 				userId: 1,
-				name:   'user',
-				email:  'user@email.com'
+				name:   '',
+				email:  ''
 			}
 		},
 		created() {
+			Intercom("boot", { app_id })
 			window.addEventListener('scroll', this.handleScroll)
 		},
 		mounted() {
-
 			Intercom("boot", {
-				app_id:  "qrls8x48",
+				app_id,
 				user_id: this.userId,
 				name:    this.name,
 				email:   this.email
 			})
 			Intercom("show")
 		},
-		watch:   {
+		watch:     {
 			email: mail => {
 				Intercom("update", { mail })
 			}
 		},
-		methods: {
+		methods:   {
 			handleScroll: e => {
 				// document -> main object of rendered DOM
 				// window === root object === gets loaded first in browser === visible part in browser
@@ -46,7 +45,7 @@
 				let currentScrollPos = window.pageYOffset
 				let bodyHeight = document.body.offsetHeight
 
-				if((innerHeight + currentScrollPos) >= bodyHeight-2) {
+				if((innerHeight + currentScrollPos) >= bodyHeight - 2) {
 					nav.style.top = '0'
 				} else if(prevScrollpos > currentScrollPos) {
 					nav.style.top = '0'
