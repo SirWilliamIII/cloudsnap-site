@@ -4,13 +4,14 @@ import AboutPage from '../views/pages/AboutPage'
 import IndexPage from '../views/pages/IndexPage'
 import AppsPage from '../views/pages/AppsPage'
 import SignUpPage from '../views/pages/SignUpPage'
-import ErpsPage from '../views/pages/ErpsPage'
+import ErpsPage from '../views/pages/ErpPage'
 import ContactPage from '../views/pages/ContactPage'
 import ThanksPage from '../views/pages/ThanksPage'
 import ErrorPage from '../views/pages/ErrorPage'
 import PostmailPage from '../views/pages/EmailUsPage'
 import AgentPage from '../views/pages/AgentPage'
 import TestPage from '../views/pages/TestPage'
+import EcommercePage from '../views/pages/EcommercePage'
 
 
 Vue.use(VueRouter)
@@ -49,6 +50,9 @@ const routes = [
 	}, {
 		path: '/will',
 		component: TestPage
+	}, {
+		path: '/ecom',
+		component: EcommercePage
 	}
 ]
 

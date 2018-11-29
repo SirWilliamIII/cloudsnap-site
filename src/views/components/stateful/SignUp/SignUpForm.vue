@@ -4,87 +4,80 @@
 			<div class="col-md-12" id="signUpForm">
                 <span id="signUpHeader">
 					<p>Sign up for a free 30&nbsp;day&nbsp;trial</p>
-					<span style="font-size:16px;">no credit card necessary)</span>
+					<span style="font-size:16px;">(no credit card necessary)</span>
                 </span>
-				<form id="contactForm">
-					<h2 class="text-center">User Information</h2>
-					<hr style="background-color: #333; color: #333;">
-					<div class="row text-left">
-						<div class="col-lg-3">
-							<label>First Name:</label>
+				<form id="contactForm" @submit="onSubmit"
+				      action="https://numanage.io/corporations.json"
+				      method="post" style="background-color: #fff;">
+					<h2 style="color: #333;">User Information</h2>
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<label style="color: #333;">First Name:</label>
+							<input class="float-right" v-model='contact.firstName' name="first_name" type="text"
+							       id="first_name"
+							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px; color: #333;
+							       margin-left: 20px;"
+							       required>
 						</div>
-						<div class="col-lg-3">
-							<input name="firstName" type="text" class="inputField"
-							       placeholder="First Name" required>
-						</div>
-						<div class="col-lg-3">
-							<label>Last Name:</label>
-						</div>
-						<div class="col-lg-3">
-							<input name="lastName" type="text" class="inputField"
-							       placeholder="Last Name" required>
-						</div>
-					</div>
-					<div class="row text-left">
-						<div class="col-lg-3">
-							<label>Company:</label>
-						</div>
-						<div class="col-lg-3">
-							<input name="coName" type="text" class="inputField"
-							       value="Company Name" required>
-						</div>
-						<div class="col-lg-3">
-
-							<label>Phone Number:</label>
-						</div>
-						<div class="col-lg-3">
-							<input name="phoneNum" type="number"
-							       class="inputField" value="Phone Number" required>
+						<div class="col-xs-6 col-md-6">
+							<label style="color: #333;">Last Name:</label>
+							<input class="float-right" v-model="contact.lastName" name="last_name" type="text"
+							       id="last_name"
+							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px;  color: #333; margin-left: 20px;"
+							       required>
 						</div>
 					</div>
-
-
-					<div class="row text-left">
-						<div class="col-lg-3">
-							<label>Email:</label>
+					<div class="row">
+						<div class="col-xs-6 col-md-6">
+							<label style="color: #333;">Company Name:</label>
+							<input class="float-right" v-model="contact.coName" name="company_name" type="text"
+							       id="company_name"
+							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px; color: #333; margin-left: 20px;"
+							       required>
 						</div>
-						<div class="col-lg-3">
-							<input name="email" type="email" id="email"
-							       class="inputField" value="Email" required>
-						</div>
-
-
-						<div class="col-lg-3">
-							<label>Password:</label>
-						</div>
-						<div class="col-lg-3">
-							<input name="password" type="password"
-							       class="inputField" value="password" required>
+						<div class="col-xs-6 col-md-6">
+							<label style="color: #333;">Phone Number:</label>
+							<input class="float-right" v-model="contact.phoneNum" name="phone_number" type="number"
+							       id="phone_number"
+							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px;  color: #333; margin-left: 20px;"
+							       required>
 						</div>
 					</div>
 
+
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<label style="color: #333;">Email Address:</label>
+							<input class="float-right" v-model="contact.email" name="email" type="email" id="email"
+							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px;  color: #333; margin-left: 20px;"
+							       required>
+						</div>
+
+						<div class="col-xs-6 col-md-6">
+							<label style="color: #333;">Password:</label>
+							<input class="float-right" v-model="contact.password" name="password" type="password"
+							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px;  color: #333;
+							       margin-left: 20px;" required>
+						</div>
+					</div>
 					<br>
-					<div class="row text-left">
-						<div class="col-lg-8 offset-lg-2">
-							<h2 style="text-align: center;">Get Your Custom Cloudsnap Instance</h2>
-							<hr style="background-color: #333; color: #333;">
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<h3 style="color: #333;">Get Your Custom Cloudsnap Instance</h3>
+							<hr>
 							<div class="row">
-								<div class="col-lg-8">
-									<input name="corporation[subdomain]" id="subdomain" type="text"
-									       placeholder="Company"
-									       class="inputField"
-									       required />
+								<div class="col-7" style="padding-right:0;">
+									<input v-model="contact.subdomain" name="subdomain" id="subdomain" type="text"
+									       placeholder="Company" style="border: 1px solid #ccc; border-radius: 10px;
+									       color: #333;"
+									       required>
+									<sub style="color: #333;">.numanage.io</sub>
 								</div>
-								<div class="col-lg-4">
-									.numanage.io
+								<div class="col-4">
+									<input class="btn float-xs-right" type="submit"
+									       value="Submit" id="submitBtn">
 								</div>
 								<div class="col-12" style="font-size:13px;color:#999">Example: <u>companyname</u>.numanage.io
-								</div>
-							</div>
-							<div class="row float-right">
-								<div class="col-lg-4">
-									<input class="btn" type="submit" value="Submit"
-									       id="submitBtn">
 								</div>
 							</div>
 						</div>
@@ -96,15 +89,52 @@
 </template>
 
 <script>
+	const url = 'https://numanage.io/corporations.json'
+
+	let contactForm = document.getElementById('contactForm')
+	let serialized = JSON.stringify(contactForm)
+
 	export default {
-		name: 'SignUpForm'
+		name:    'SignUpForm',
+		data() {
+			return {
+				contact: {
+					firstName: '',
+					lastName:  '',
+					coName:    '',
+					phoneNum:  '',
+					email:     '',
+					password:  '',
+					subdomain: ''
+				}
+			}
+		},
+		methods: {
+			onSubmit() {
+				this.$http.post(url, serialized)
+					.then(res => {
+						console.log(res)
+						window.location =
+							`https://${this.subdomain}.numanage.io/marketing-login?email=${this.email}`
+					})
+					.catch(e => {
+						console.log(e)
+					})
+			}
+		}
+
 	}
 </script>
 
 <style>
 
 	#signUpForm {
-		background-color: #fff;
+		background-size: cover
+	}
+
+	#sign_up_icon img {
+		max-width: 60%;
+		opacity:   0.5;
 	}
 
 	#contactForm {
@@ -133,34 +163,20 @@
 		margin-top:  0;
 	}
 
-	.inputField {
-		border:        1px solid #ccc;
-		border-radius: 10px;
-		padding:       5px;
-		margin:        8px;
-	}
-
-	.inputField:focus {
-		border:        1px solid #aaa;
-		border-radius: 10px;
-	}
-
 	#submitBtn {
-		padding:          20px;
-		background-color: #2CAAE0;
+		padding:          10px 20px 10px 20px;
+		background-color: #ff5128;
 		color:            #fff;
-		border-radius:    10px;
-		width: 150px;
-	}
-
-	#mainRow {
-		margin-top: 50px;
+		margin-left:      20px;
 	}
 
 	@media only screen and (max-width: 768px) {
-		#mainRow {
-			margin-top: 0;
+		#submitBtn {
+			padding:          5px 5px 5px 5px;
+			background-color: #ff5128;
+			color:            #fff;
+			margin-left:      30px;
+			font-size: 80%;
 		}
 	}
-
 </style>

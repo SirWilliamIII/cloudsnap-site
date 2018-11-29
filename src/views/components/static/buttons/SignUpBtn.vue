@@ -14,9 +14,9 @@
 	#sign-up-btn {
 		background-color: #ff5128;
 		font-weight:      700;
-		font-size:        24px;
-		border-radius:    10px;
-		padding:          25px;
+		font-size:        28px;
+		border-radius:    15px;
+		padding:          35px;
 		color:            #ccc;
 	}
 
@@ -27,8 +27,19 @@
 
 	@media only screen and (max-width: 768px) {
 		#btnWrapper {
-			margin: 80px 80px 80px 60px;
+			margin:        80px 80px 80px 60px;
+			font-size:     24px;
+			border-radius: 10px;
+			padding:       20px;
 		}
+	#sign-up-btn {
+		background-color: #ff5128;
+		font-weight:      700;
+		font-size:        24px;
+		border-radius:    15px;
+		padding:          20px;
+		color:            #ccc;
+	}
 
 	}
 </style>

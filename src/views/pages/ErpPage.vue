@@ -66,7 +66,7 @@
 	import ConcurLogo from '../../assets/images/logos/concur-logo-wide-black.png'
 
 	export default {
-		name:       'TemplatePage',
+		name:       'ErpPage',
 		components: {
 			Navbar, Footer
 		},

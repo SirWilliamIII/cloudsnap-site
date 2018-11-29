@@ -63,6 +63,7 @@
 
 <script>
 	import axios from 'axios'
+	import serialize from 'serialize-javascript'
 
 	export default {
 		name:    'contactForm',
@@ -97,6 +98,9 @@
 					message: this.contact.message,
 					date:    new Date()
 				}
+
+				serialize(formData)
+
 				axios({
 					method: 'post',
 					url,
@@ -107,7 +111,6 @@
 						if(res.status !== 404 && this.isSending === true) {
 							this.isSending = false
 							this.messageSent = true
-
 						}
 					})
 					.catch(e => {

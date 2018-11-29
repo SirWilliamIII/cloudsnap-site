@@ -3,7 +3,6 @@
 		<Navbar />
 		<div id="content">
 			<!-- TEMPLATE HERE-->
-
 			<div id="agentLanding">
 				<div class="container">
 					<div class="row text-center">
@@ -48,7 +47,6 @@
 				<br>
 				<h2 id="agentTitle">The Cloudsnap Agent uses shared TLS certificates over&nbsp;WebSockets.
 				</h2>
-				<hr id="line">
 			</div>
 
 			<div class="sectionBlock" id="configurableBlock">

@@ -1,6 +1,6 @@
 <template>
 	<div id="appBtn">
-		View complete library
+		View the App Library
 	</div>
 </template>
 

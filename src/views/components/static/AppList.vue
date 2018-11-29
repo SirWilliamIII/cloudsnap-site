@@ -1,12 +1,14 @@
 <template>
 	<div id="appLogosWrapper">
 		<div class="container" id="appLogosContainer">
-			<div class="row text-center mx-auto" id="app-list">
+			<div class="row text-center mx-auto" id="app-list" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+		     data-aos-duration="400">
 				<div class="col-md-4 col-sm-6 my-auto" v-for="logo in logos" v-bind:key="logos[logo]">
 					<img :src="logo.img" class="appLogos" />
 				</div>
 			</div>
-			<div class="row mx-auto">
+			<div class="row mx-auto" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+		     data-aos-duration="400">
 				<div class="col-md-4 offset-md-4 col-xs-8 text-center">
 					<router-link to="apps">
 						<AppLibBtn />
@@ -55,10 +57,6 @@
 		position:        relative;
 		height:          50vh;
 
-	}
-
-	#appLogosContainer {
-		margin-top: 100px;
 	}
 
 	.appLogos {

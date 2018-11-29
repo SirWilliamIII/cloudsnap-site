@@ -3,7 +3,7 @@
 		<Navbar />
 		<div id="content" class="text-center">
 			<!-- TEMPLATE HERE-->
-			<h1>App Library</h1>
+			<h1 id="cardsTitle">Which apps would you like to connect?</h1>
 			<AppCards />
 		</div>
 		<Footer />
@@ -35,5 +35,12 @@
 
 	#content {
 		margin-top: 100px;
+	}
+
+	#cardsTitle {
+		color: #fff;
+		margin-bottom: 50px;
+		margin-top: 50px;
+		font-size: 60px;
 	}
 </style>

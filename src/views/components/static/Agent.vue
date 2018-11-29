@@ -16,7 +16,8 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 offset-md-4 col-xs-6 offset-xs-3">
+				<div class="col-md-4 offset-md-4 col-xs-6 offset-xs-3" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+		     data-aos-duration="400">
 					<AgentBtn />
 				</div>
 			</div>
@@ -41,11 +42,7 @@
 		background:      url('../../../assets/images/various/prem_bg.jpg') center;
 		position:        relative;
 		text-align:      center;
-		height:          70vh;
-	}
-
-	#premWrapper {
-		margin-top: 50vh;
+		height:          100vh;
 	}
 
 	#premTitle {
@@ -91,10 +88,6 @@
 		.sectionText {
 			font-size:  15px;
 			margin-top: 15px;
-		}
-
-		#prem {
-			height: 100vh;
 		}
 	}
 </style>

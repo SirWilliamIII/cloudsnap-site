@@ -4,17 +4,18 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 offset-1 my-auto" id="stopWrapper">
-						<h1 class="stopWaiting" data-aos="slide-right">
+						<h1 class="stopWaiting" data-aos="slide-right" data-aos-duration="400">
 							<strong>Stop</strong> waiting. <br>
 						</h1>
 						<br>
-						<h1 class="stopWaiting" data-aos="slide-right" data-aos-duration="1000">
+						<h1 class="stopWaiting" data-aos="slide-right" data-aos-duration="400"
+						    data-aos-easing="ease-in-sine">
 							<strong>Start</strong> building.
 						</h1>
 					</div>
 					<div class="col-md-5 offset-md-1 col-xs-10 offset-xs-1" id="postmailWrapper" data-aos="flip-up"
 					     data-aos-duration="400">
-						<Postmail data-aos="slide-left" data-aos-duration="600" />
+						<Postmail data-aos="slide-left" />
 					</div>
 
 					<!--<div class="col-md-5 offset-md-1 text-center">-->
@@ -53,11 +54,6 @@
 
 	export default {
 		name:       'ContactSection',
-		created() {
-			AOS.init({
-				duration: 500
-			})
-		},
 		components: {
 			Postmail
 		}
@@ -67,10 +63,10 @@
 <style>
 	.cta {
 		position:        relative;
-		padding:         150px 0;
+		padding:         80px 0;
 		background:      #2CAAE0 center;
 		background-size: cover;
-		height:          80vh;
+		height:          85vh;
 	}
 
 	.cta .cta-content {
@@ -88,13 +84,13 @@
 
 	#postmailWrapper {
 		margin-right: 50px;
-		background: rgba(0,0,0,0);
+		background:   rgba(0, 0, 0, 0);
 	}
 
 	@media only screen and (max-width: 768px) {
 		.cta {
-			padding: 0;
-			height:  90vh;
+			height:  80vh;
+			padding: 50px 0;
 		}
 
 		#stopWrapper {
@@ -104,7 +100,6 @@
 		#postmailWrapper {
 			margin-left:  20px;
 			margin-right: auto;
-			margin-top: 80px;
 			text-align:   center;
 		}
 

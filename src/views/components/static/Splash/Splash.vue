@@ -5,19 +5,11 @@
 				<div class="col-md-5">
 					<div class="header-content">
 						<SplashText />
-						<div id="signUpBtn1">
-							<SignUpBtn />
-						</div>
 					</div>
-
 				</div>
-				<div class="col-md-7 col-xs-12 my-auto">
+				<div class="col-md-7 col-xs-12">
 					<SplashImg />
-				</div>
-				<div class="row" id="signUpBtn">
-					<div class="col-xs-12 mx-auto">
-						<SignUpBtn />
-					</div>
+					<SignUpBtn id="signUp" />
 				</div>
 			</div>
 		</div>
@@ -47,16 +39,14 @@
 		height: 100vh;
 	}
 
-	#signUpBtn {
-		visibility: hidden;
-	}
-
-	#signUpBtn1 {
-		margin-top: 50px;
-	}
-
 	.header-content {
 		color: #fff;
+	}
+
+	#signUp {
+		margin-top: 20px;
+		margin-left: 110px;
+		padding: 40px;
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -68,12 +58,12 @@
 			display: none;
 		}
 
-		#signUpBtn1{
-			visibility: hidden;
+		#signUp {
+			margin-top: 40px;
+			padding: 20px;
+			margin-left: 15px;
 		}
-		#signUpBtn {
-			visibility: visible;
-		}
+
 		#splashContainer {
 			height: 100%;
 		}

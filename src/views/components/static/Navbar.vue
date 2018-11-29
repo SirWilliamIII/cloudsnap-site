@@ -15,19 +15,19 @@
 
 					<div class="nav navbar-nav ml-auto">
 						<div class="nav-item">
-							<router-link to="about" class="nav-link">About</router-link>
+							<router-link to="/" class="nav-link">Home</router-link>
 						</div>
 						<div class="nav-item">
-							<router-link to="apps" class="nav-link">Apps</router-link>
-						</div>
-						<div class="nav-item">
-							<router-link to="email" class="nav-link">Email</router-link>
+							<router-link to="apps" class="nav-link">App Library</router-link>
 						</div>
 						<div class="nav-item">
 							<router-link to="signup" class="nav-link">Sign Up</router-link>
 						</div>
 						<div class="nav-item">
 							<router-link to="erps" class="nav-link">ERPs</router-link>
+						</div>
+						<div class="nav-item">
+							<router-link to="ecom" class="nav-link">E-Commerce</router-link>
 						</div>
 						<div class="nav-item">
 							<router-link to="contact" class="nav-link">Contact</router-link>
@@ -51,7 +51,8 @@
 		{ name: 'Apps' },
 		{ name: 'Sign Up' },
 		{ name: 'ERPs' },
-		{ name: 'Contact' }
+		{ name: 'Contact' },
+		{ name: 'Ecommerce' }
 	]
 
 	export default {
@@ -126,7 +127,7 @@
 	@media only screen and (max-width: 768px) {
 
 		.nav-link {
-			color: #fff;
+			color:            #fff;
 			background-color: #333;
 		}
 
