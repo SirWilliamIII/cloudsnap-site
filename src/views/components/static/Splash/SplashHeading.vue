@@ -3,7 +3,7 @@
 		<h1 id="splash-text">
 			Connect your apps in a<strong> snap</strong>
 		</h1>
-		<p class="lead"> The iPaaS solution built for the hybrid enterprise</p>
+		<p class="lead"> The iPaaS solution built for the connected enterprise</p>
 	</div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
 	<div id="btnWrapper">
-		<router-link to="signup" class="btn" id="sign-up-btn">Sign up for a free trial!</router-link>
+		<router-link to="signup" class="btn" id="sign-up-btn">Sign Up!</router-link>
 	</div>
 </template>
 

@@ -42,7 +42,7 @@
 		background:      url('../../../assets/images/various/prem_bg.jpg') center;
 		position:        relative;
 		text-align:      center;
-		height:          100vh;
+		height:          80vh;
 	}
 
 	#premTitle {

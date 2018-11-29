@@ -18,7 +18,7 @@
 							<router-link to="/" class="nav-link">Home</router-link>
 						</div>
 						<div class="nav-item">
-							<router-link to="apps" class="nav-link">App Library</router-link>
+							<router-link to="apps" class="nav-link">Connectors</router-link>
 						</div>
 						<div class="nav-item">
 							<router-link to="signup" class="nav-link">Sign Up</router-link>
@@ -111,7 +111,9 @@
 	}
 
 	.nav-link:hover {
-		color: #aaa;
+		color: #ccc;
+		background-color: #333;
+		border-radius: 5px;
 	}
 
 	#navPhoneNumWrapper {

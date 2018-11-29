@@ -3,13 +3,13 @@
 		<div class="container" id="splashContainer">
 			<div class="row" id="splashRow">
 				<div class="col-md-5">
-					<div class="header-content">
+					<div class="headerContent">
 						<SplashText />
 					</div>
 				</div>
 				<div class="col-md-7 col-xs-12">
-					<SplashImg />
-					<SignUpBtn id="signUp" />
+					<SplashImg id="splashImg"/>
+					<SignUpBtn id="signUpBtn" />
 				</div>
 			</div>
 		</div>
@@ -39,11 +39,11 @@
 		height: 100vh;
 	}
 
-	.header-content {
+	.headerContent {
 		color: #fff;
 	}
 
-	#signUp {
+	#signUpBtn {
 		margin-top: 20px;
 		margin-left: 110px;
 		padding: 40px;
@@ -54,11 +54,11 @@
 			margin-top: 20px;
 		}
 
-		.header-content {
+		.headerContent {
 			display: none;
 		}
 
-		#signUp {
+		#signUpBtn {
 			margin-top: 40px;
 			padding: 20px;
 			margin-left: 15px;

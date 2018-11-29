@@ -6,7 +6,8 @@
 			<Splash />
 			<Features />
 			<AppList />
-			<Agent />
+			<Integrate />
+			<Scalability />
 			<ContactSection />
 			<!-- END -->
 		</div>
@@ -20,14 +21,15 @@
 	import Splash from '../components/static/Splash/Splash'
 	import AppList from '../components/static/AppList'
 	import Features from '../components/static/Features'
-	import Agent from '../components/static/Agent'
 	import ContactSection from '../components/static/ContactSection'
+	import Integrate from '../components/static/Integrate'
+	import Scalability from '../components/static/Scalability'
 
 
 	export default {
 		name:       'IndexPage',
 		components: {
-			Navbar, Footer, Splash, AppList, Features, Agent, ContactSection
+			Navbar, Footer, Splash, AppList, Features, ContactSection, Integrate, Scalability
 		}
 	}
 </script>

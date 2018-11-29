@@ -9,69 +9,74 @@
 				<form id="contactForm" @submit="onSubmit"
 				      action="https://numanage.io/corporations.json"
 				      method="post" style="background-color: #fff;">
-					<h2 style="color: #333;">User Information</h2>
+					<h2 class="dark-text">User Information</h2>
 					<div class="row">
 						<div class="col-md-6 col-xs-6">
-							<label style="color: #333;">First Name:</label>
-							<input class="float-right" v-model='contact.firstName' name="first_name" type="text"
+							<label class="dark-text">First Name:</label>
+							<input class="float-right input"
+							       v-model='contact.firstName'
+							       name="first_name"
+							       type="text"
 							       id="first_name"
-							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px; color: #333;
-							       margin-left: 20px;"
 							       required>
 						</div>
 						<div class="col-xs-6 col-md-6">
-							<label style="color: #333;">Last Name:</label>
-							<input class="float-right" v-model="contact.lastName" name="last_name" type="text"
+							<label class="dark-text">Last Name:</label>
+							<input class="float-right dark-text" v-model="contact.lastName" name="last_name" type="text"
 							       id="last_name"
-							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px;  color: #333; margin-left: 20px;"
+							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px; margin-left: 20px;"
 							       required>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-6 col-md-6">
-							<label style="color: #333;">Company Name:</label>
-							<input class="float-right" v-model="contact.coName" name="company_name" type="text"
+							<label class="dark-text">Company Name:</label>
+							<input class="float-right dark-text" v-model="contact.company_name" name="company_name" type="text"
 							       id="company_name"
-							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px; color: #333; margin-left: 20px;"
+							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px; margin-left: 20px;"
 							       required>
 						</div>
 						<div class="col-xs-6 col-md-6">
-							<label style="color: #333;">Phone Number:</label>
-							<input class="float-right" v-model="contact.phoneNum" name="phone_number" type="number"
+							<label class="dark-text">Phone Number:</label>
+							<input class="float-right dark-text" v-model="contact.phoneNum" name="phone_number" type="number"
 							       id="phone_number"
-							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px;  color: #333; margin-left: 20px;"
+							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px; margin-left: 20px;"
 							       required>
 						</div>
 					</div>
-
 
 					<div class="row">
 						<div class="col-xs-12 col-md-6">
-							<label style="color: #333;">Email Address:</label>
-							<input class="float-right" v-model="contact.email" name="email" type="email" id="email"
-							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px;  color: #333; margin-left: 20px;"
-							       required>
+							<label class="dark-text">Email Address:</label>
+							<input
+								class="float-right dark-text"
+								v-model="contact.email"
+								name="email"
+								type="email"
+								id="email"
+								style="border: 1px solid #ccc; border-radius: 10px; width: 250px; margin-left: 20px;"
+								required
+							>
 						</div>
 
 						<div class="col-xs-6 col-md-6">
-							<label style="color: #333;">Password:</label>
-							<input class="float-right" v-model="contact.password" name="password" type="password"
-							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px;  color: #333;
+							<label class="dark-text">Password:</label>
+							<input class="float-right dark-text" v-model="contact.password" name="password" type="password"
+							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px;
 							       margin-left: 20px;" required>
 						</div>
 					</div>
 					<br>
 					<div class="row">
 						<div class="col-xs-12 col-md-6">
-							<h3 style="color: #333;">Get Your Custom Cloudsnap Instance</h3>
+							<h3 class="dark-text">Get Your Custom Cloudsnap Instance</h3>
 							<hr>
 							<div class="row">
 								<div class="col-7" style="padding-right:0;">
-									<input v-model="contact.subdomain" name="subdomain" id="subdomain" type="text"
-									       placeholder="Company" style="border: 1px solid #ccc; border-radius: 10px;
-									       color: #333;"
+									<input class="dark-text" v-model="contact.subdomain" name="subdomain" id="subdomain" type="text"
+									       placeholder="Company" style="border: 1px solid #ccc; border-radius: 10px;"
 									       required>
-									<sub style="color: #333;">.numanage.io</sub>
+									<sub class="dark-text">.numanage.io</sub>
 								</div>
 								<div class="col-4">
 									<input class="btn float-xs-right" type="submit"
@@ -99,10 +104,10 @@
 		data() {
 			return {
 				contact: {
-					firstName: '',
-					lastName:  '',
-					coName:    '',
-					phoneNum:  '',
+					first_name: '',
+					last_name:  '',
+					company_name:    '',
+					phone_number:  '',
 					email:     '',
 					password:  '',
 					subdomain: ''
@@ -113,9 +118,10 @@
 			onSubmit() {
 				this.$http.post(url, serialized)
 					.then(res => {
-						console.log(res)
-						window.location =
-							`https://${this.subdomain}.numanage.io/marketing-login?email=${this.email}`
+						if(res.status !== 400) {
+							window.location =
+								`https://${this.subdomain}.numanage.io/marketing-login?email=${this.email}`
+						}
 					})
 					.catch(e => {
 						console.log(e)
@@ -127,6 +133,10 @@
 </script>
 
 <style>
+
+	.dark-text {
+		color: #333
+	}
 
 	#signUpForm {
 		background-size: cover
