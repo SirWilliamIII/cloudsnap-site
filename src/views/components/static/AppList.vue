@@ -55,8 +55,7 @@
 		background-size: cover;
 		background:      url("../../../assets/images/various/white-bg.jpg") center;
 		position:        relative;
-		height:          50vh;
-
+		height:          55vh;
 	}
 
 	.appLogos {
@@ -77,6 +76,7 @@
 
 		#appLogosContainer {
 			margin-top: 0;
+			height: 100vh;
 		}
 	}
 </style>

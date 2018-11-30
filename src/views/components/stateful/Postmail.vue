@@ -51,16 +51,16 @@
 	#submitForm {
 		background-color: #ff5128;
 		font-weight:      700;
-		color:            #ccc;
+		color:            #fff;
 		border-radius:    10px;
 		font-size:        24px;
 		text-align: center;
-		padding:          40px;
+		padding-bottom: 40px;
 	}
 
 	#submitForm:hover {
 		background-color: #ff3100;
-		color:            #fff;
+		color:            #ccc;
 	}
 
 	#formTitle {
@@ -81,7 +81,6 @@
 		#submitForm {
 			font-size:  26px;
 			color: white;
-			margin-top: 10px;
 		}
 
 		#submitForm:hover {

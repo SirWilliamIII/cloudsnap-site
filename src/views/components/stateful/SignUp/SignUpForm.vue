@@ -11,40 +11,44 @@
 					<div class="row">
 						<div class="col-md-6 col-xs-12">
 							<label class="dark-text">First Name:</label>
-							<input class="float-right dark-text inputField"
+							<input class="dark-text inputField"
 							       v-model='contact.first_name'
 							       name="first_name"
 							       type="text"
 							       id="first_name"
-							       required>
+							       required
+							/>
 						</div>
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Last Name:</label>
-							<input class="float-right dark-text inputField"
+							<input class="dark-text inputField"
 							       v-model="contact.last_name"
 							       name="last_name"
 							       type="text"
 							       id="last_name"
-							       required>
+							       required
+							/>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Company Name:</label>
-							<input class="float-right dark-text inputField"
+							<input class="dark-text inputField"
 							       v-model="contact.company_name" name="company_name"
 							       type="text"
 							       id="company_name"
-							       required>
+							       required
+							/>
 						</div>
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Phone Number:</label>
-							<input class="float-right dark-text inputField"
+							<input class="dark-text inputField"
 							       v-model="contact.phone_number"
 							       name="phone_number"
 							       type="number"
 							       id="phone_number"
-							       required>
+							       required
+							/>
 						</div>
 					</div>
 
@@ -52,20 +56,22 @@
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Email Address:</label>
 							<input
-								class="float-right dark-text inputField"
+								class="dark-text inputField"
 								v-model="contact.email"
 								name="email"
 								type="email"
 								id="email"
-								required>
+								required
+							/>
 						</div>
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Password:</label>
-							<input class="float-right dark-text inputField"
+							<input class="dark-text inputField"
 							       v-model="contact.password"
 							       name="password"
 							       type="password"
-							       required>
+							       required
+							/>
 						</div>
 					</div>
 					<br>
@@ -74,22 +80,24 @@
 							<h3 class="dark-text text-left">Get Your Custom Cloudsnap Instance</h3>
 							<hr>
 							<div class="row">
-								<div class="col-xs-4 col-md-6">
-									<input class="dark-text inputField"
-									       v-model="contact.subdomain"
-									       name="subdomain"
-									       id="subdomain"
-									       type="text"
-									       placeholder="Company Name"
-									       required />
+								<div class="col-xs-6 col-md-6">
+									<span class="d-md-inline-flex">
+										<input class="dark-text inputField"
+									             v-model="contact.subdomain"
+									             name="subdomain"
+									             id="subdomain"
+									             type="text"
+									             placeholder="Company Name"
+									             required
+									/>
+										<p style="margin-top: 20px;" id="smallText">.numanage.io</p>
 
 									<input class="btn" type="submit"
-									       value="Submit" id="submitBtn">
+									       value="Submit" id="submitBtn"></span>
 								</div>
 							</div>
 						</div>
 					</div>
-
 				</form>
 			</div>
 		</div>
@@ -144,7 +152,7 @@
 	}
 
 	#signUpForm {
-		background-size: cover
+		background-size: 500px 750px;
 	}
 
 	#sign_up_icon img {
@@ -179,10 +187,11 @@
 	}
 
 	#submitBtn {
-		padding:          10px 20px 10px 20px;
 		background-color: #ff5128;
 		color:            #fff;
 		margin-left:      20px;
+		border-radius: 10px;
+		font-size: 24px;
 	}
 
 	.inputField {
@@ -192,21 +201,22 @@
 		margin-left:   20px;
 	}
 
-	#subdomain {
-		width: 150px;
-	}
-
 	@media only screen and (max-width: 768px) {
 		#submitBtn {
-			padding:          5px;
+			padding:          8px;
 			background-color: #ff5128;
 			color:            #fff;
-			font-size:        80%;
+			border-radius: 5px;
+			font-size: 16px;
 		}
 
 		.inputField {
 			margin-left: 0;
 			width:       auto;
+		}
+
+		#smallText {
+			display: none;
 		}
 	}
 </style>

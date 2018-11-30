@@ -3,9 +3,7 @@
 		<Navbar />
 		<div id="content">
 			<!-- TEMPLATE HERE-->
-<SignUpForm />
-
-
+			<SignUpForm />
 			<!-- END -->
 		</div>
 		<Footer />
@@ -33,7 +31,7 @@
 		flex-direction: column;
 		flex:           1;
 		z-index:        0;
-		overflow: hidden;
+		overflow:       hidden;
 	}
 
 	#content {

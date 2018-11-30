@@ -32,11 +32,5 @@
 			padding:       20px;
 			width: 200px;
 		}
-
-
-	#sign-up-btn:hover {
-		background-color: #ff3100;
-		color:            #ccc;
-	}
 	}
 </style>
