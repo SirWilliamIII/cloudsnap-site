@@ -2,13 +2,12 @@
 	<div class="text-white section_block" id="integrate">
 		<div class="container" style="z-index: 2;">
 			<div class="row text-center">
-				<div class="col-md-6 my-auto">
-					<h1 class="section_header mainText">Integrate Seamlessly</h1>
+				<div class="col-md-6 my-auto" id="integrateWrapper">
+					<h1 class="sectionHeader mainText">Integrate Seamlessly</h1>
 					<h1 class="mainText">with the apps you already use</h1>
 					<hr>
-					<p class="section_text">
-						Choose from our library of connected apps or create your own custom connection in minutes.
-						Custom apps can be both cloud based as well as on-prem or legacy apps.
+					<p class="lead" style="color: #2CAAE0;">
+						{{ integrate.mainText }}
 					</p>
 					<!--<a href="#prem" class="btn btn-info">See more</a> -->
 				</div>
@@ -29,7 +28,11 @@
 		name:    'Integrate',
 		data() {
 			return {
-				bgPic
+				bgPic,
+				integrate: {
+					mainText:
+						'Choose from our library of connected apps or create your own custom connection in minutes. Custom apps can be both cloud based as well as on-prem or legacy apps.'
+				}
 			}
 		},
 		methods: {}
@@ -38,7 +41,7 @@
 
 <style>
 	#integrate {
-		height:  75vh;
+		height: 75vh;
 	}
 
 	.text-white {
@@ -59,19 +62,39 @@
 		position:            relative;
 	}
 
-	.section_header {
+	.sectionHeader {
 		letter-spacing: 1px;
-		color:          #fff;
+		color:          #2CAAE0;
 		text-align:     center;
 	}
 
 	.mainText {
-		font-size: 50px;
+		font-size:   50px;
+		color:       #2CAAE0;
+		font-weight: 700;
 	}
 
 	@media only screen and (max-width: 768px) {
 		#integrate_comp {
 			display: none;
+		}
+	}
+
+	#integrateWrapper {
+		background-color: #f1f1f1;
+		padding:          40px;
+		border-radius:    10px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		#integrate {
+			height: 110vh;
+		}
+
+		#integrateWrapper {
+			background-color: #aaa;
+			padding:          40px;
+			border-radius:    10px;
 		}
 	}
 

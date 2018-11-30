@@ -43,6 +43,7 @@
 		letter-spacing: 1px;
 		color:          #333;
 		z-index: 1;
+		font-size: 72px;
 	}
 
 	.section_sub_head {
