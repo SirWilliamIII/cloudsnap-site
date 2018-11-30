@@ -11,7 +11,7 @@
 			       required />
 
 
-			<input class="form-control" type="text" name="subject" placeholder="Subject" style="color:#333;" required />
+			<input class="form-control" type="text" name="subject" placeholder="Subject" required />
 
 			<textarea class="form-control" name="text" placeholder="Message" rows="4" required></textarea>
 
@@ -51,7 +51,6 @@
 	#submitForm {
 		background-color: #ff5128;
 		font-weight:      700;
-		color:            #fff;
 		border-radius:    10px;
 		font-size:        24px;
 		text-align: center;

@@ -82,7 +82,7 @@
 							<hr>
 							<div class="row">
 								<div class="col-xs-10 col-md-12">
-									<div style="display: flex;">
+									<div style="display: flex; justify-content: space-between;">
 										<input
 											class="dark-text inputField form-control"
 											v-model="contact.subdomain"
@@ -236,22 +236,24 @@
 	}
 
 	.inputField {
-		border:        1px solid #ccc;
+		border:        1px solid #aaa;
 		border-radius: 10px;
 		margin-left:   20px;
+		color: #aaa
 	}
 
 	.inputField:focus {
 		border-color: #2CAAE0;
+		color: #333;
 	}
 
 	@media only screen and (max-width: 768px) {
 		#submitBtn {
-			padding:          8px;
 			background-color: #ff5128;
 			color:            #fff;
 			border-radius:    5px;
 			font-size:        16px;
+			padding: 10px;
 		}
 
 		.inputField {
