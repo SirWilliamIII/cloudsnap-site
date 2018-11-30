@@ -16,11 +16,11 @@
 <style scoped>
 	#splash-text {
 		font-weight:   300;
-		font-size:     90px;
+		font-size:     78px;
 		margin-bottom: 40px;
 		margin-top:    auto;
 		color:         #fff;
-		line-height:   inherit;
+		line-height:   90px;
 	}
 
 	@media only screen and (max-width: 768px) {
