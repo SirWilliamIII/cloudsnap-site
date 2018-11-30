@@ -16,18 +16,17 @@
 		font-weight:      700;
 		font-size:        28px;
 		border-radius:    15px;
-		padding:          35px;
-		color:            #ccc;
+		padding:          20px 60px 20px 60px;
+		color:            #fff;
 	}
 
 	#sign-up-btn:hover {
 		background-color: #ff3100;
-		color:            #fff;
+		color:            #ccc;
 	}
 
 	@media only screen and (max-width: 768px) {
-		#btnWrapper {
-			margin:        80px 80px 80px 60px;
+		#sign-up-btn {
 			font-size:     24px;
 			border-radius: 10px;
 			padding:       20px;
