@@ -7,10 +7,9 @@
 						<h1 class="stopWaiting" data-aos="slide-right" data-aos-duration="400">
 							<strong>Stop</strong> waiting. <br>
 						</h1>
-						<br>
 						<h1 class="stopWaiting" data-aos="slide-right" data-aos-duration="400"
 						    data-aos-easing="ease-in-sine">
-							<strong>Start</strong> building.
+							Start <strong>connecting</strong>.
 						</h1>
 					</div>
 					<div class="col-md-5 offset-md-1 col-xs-10 offset-xs-1" id="postmailWrapper" data-aos="flip-up"

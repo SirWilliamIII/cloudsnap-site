@@ -3,8 +3,8 @@
 		<div class="container" style="z-index: 2;">
 			<div class="row text-center">
 				<div class="col-md-6 my-auto">
-					<h1 class="section_header">Integrate Seamlessly</h1>
-					<h1>with the apps you already use</h1>
+					<h1 class="section_header mainText">Integrate Seamlessly</h1>
+					<h1 class="mainText">with the apps you already use</h1>
 					<hr>
 					<p class="section_text">
 						Choose from our library of connected apps or create your own custom connection in minutes.
@@ -38,7 +38,7 @@
 
 <style>
 	#integrate {
-		height:  70vh;
+		height:  75vh;
 	}
 
 	.text-white {
@@ -46,13 +46,10 @@
 	}
 
 	#integrate_comp {
-		height:     100%;
 		max-height: 480px;
 		max-width:  620px;
-		top:        0;
 		right:      100px;
 		z-index:    1;
-
 	}
 
 	.section_block {
@@ -66,6 +63,10 @@
 		letter-spacing: 1px;
 		color:          #fff;
 		text-align:     center;
+	}
+
+	.mainText {
+		font-size: 50px;
 	}
 
 	@media only screen and (max-width: 768px) {
