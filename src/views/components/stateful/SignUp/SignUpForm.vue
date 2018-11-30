@@ -152,7 +152,7 @@
 	}
 
 	#signUpForm {
-		background-size: 500px 750px;
+		background-size: 480px 720px;
 	}
 
 	#sign_up_icon img {
