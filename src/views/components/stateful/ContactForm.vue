@@ -206,6 +206,7 @@
 	.contact-form input[type="text"]:focus,
 	.contact-form textarea:focus {
 		border-color: #2CAAE0;
+		color: #333;
 	}
 
 	#rowWrapper {

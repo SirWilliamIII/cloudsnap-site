@@ -15,13 +15,7 @@
 
 					<div class="nav navbar-nav ml-auto">
 						<div class="nav-item">
-							<router-link to="/" class="nav-link">Home</router-link>
-						</div>
-						<div class="nav-item">
 							<router-link to="apps" class="nav-link">Connectors</router-link>
-						</div>
-						<div class="nav-item">
-							<router-link to="signup" class="nav-link">Sign Up</router-link>
 						</div>
 						<div class="nav-item">
 							<router-link to="erps" class="nav-link">ERPs</router-link>
@@ -31,6 +25,9 @@
 						</div>
 						<div class="nav-item">
 							<router-link to="contact" class="nav-link">Contact</router-link>
+						</div>
+						<div class="nav-item">
+							<router-link to="signup" class="nav-link">Sign Up</router-link>
 						</div>
 					</div>
 
@@ -111,9 +108,9 @@
 	}
 
 	.nav-link:hover {
-		color: #ccc;
+		color:            #ccc;
 		background-color: #333;
-		border-radius: 5px;
+		border-radius:    5px;
 	}
 
 	#navPhoneNumWrapper {

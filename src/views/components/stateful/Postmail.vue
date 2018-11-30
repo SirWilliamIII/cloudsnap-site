@@ -3,7 +3,7 @@
 		<form action="https://postmail.invotes.com/send" method="post" id="email_form">
 			<h1 id="formTitle">Email Us</h1>
 			<!-- Access Token for Postmail -->
-			<input type="hidden" name="access_token" value="geuvzcp1zvzd52yx9u3qw54q" />
+			<input type="hidden" name="access_token" value="f9fzfpejnykpz47yzfysbasi" />
 			<!-- INPUTS -->
 
 			<input class="form-control" type="email" name="sales@cloudsnap.com"
@@ -11,7 +11,7 @@
 			       required />
 
 
-			<input class="form-control" type="text" name="subject" placeholder="Subject" required />
+			<input class="form-control" type="text" name="subject" placeholder="Subject" style="color:#333;" required />
 
 			<textarea class="form-control" name="text" placeholder="Message" rows="4" required></textarea>
 

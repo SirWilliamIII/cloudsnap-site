@@ -10,7 +10,7 @@
 					<h2 class="dark-text text-center">User Information</h2>
 					<div class="row">
 						<div class="col-md-6 col-xs-12">
-							<label class="dark-text">First Name:</label>
+							<label for="first_name" class="dark-text">First Name:</label>
 							<input class="dark-text inputField form-control"
 							       v-model='contact.first_name'
 							       name="first_name"
@@ -83,13 +83,14 @@
 							<div class="row">
 								<div class="col-xs-10 col-md-12">
 									<div style="display: flex;">
-										<input class="dark-text inputField form-control"
-										       v-model="contact.subdomain"
-										       name="corporation[subdomain]"
-										       id="subdomain"
-										       type="text"
-										       placeholder="Company"
-										       required
+										<input
+											class="dark-text inputField form-control"
+											v-model="contact.subdomain"
+											name="corporation[subdomain]"
+											id="subdomain"
+											type="text"
+											placeholder="Company"
+											required
 										/>
 										<p style="margin-top: 20px;" id="smallText">.numanage.io</p>
 										<input class="dark-text inputField" type="submit"
@@ -141,15 +142,40 @@
 					url:     url,
 					data:    data, // serializes the form's elements.
 					success: function (data) {
-						console.log(data);
 						window.location = "https://" + subdomain + ".numanage.io/marketing-login?email=" + email
 					},
 					error:   function (xhr) {
-						console.log("error")
-						console.log(xhr.responseText)
+						console.log(xhr)
+					}
+				})
+
+
+				$('#corporation_name').keyup(function () {
+					var str = $('#corporation_name').val();
+					var new_val = str.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '').toLowerCase()
+					$('#subdomain').val(new_val)
+				})
+
+
+				$('#subdomain').keyup(function () {
+					console.log("down")
+					var str = $('#subdomain').val();
+					var new_val = str.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '').toLowerCase()
+
+					if(/^[a-z0-9]*$/.test(str) == false) {
+						console.log("subdomain error")
+						$('#subdomain_warning').css("color", "red")
+						$('#subdomain_warning').css("font-weight", "bold")
+						$('#subdomain').val(new_val)
+
+					} else {
+						$('#subdomain_warning').css("color", "#999999")
+						$('#subdomain_warning').css("font-weight", "300")
 
 					}
-				});
+
+
+				})
 
 				e.preventDefault();
 			}
