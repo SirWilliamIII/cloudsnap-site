@@ -11,7 +11,7 @@
 					<div class="row">
 						<div class="col-md-6 col-xs-12">
 							<label class="dark-text">First Name:</label>
-							<input class="dark-text inputField"
+							<input class="dark-text inputField form-control"
 							       v-model='contact.first_name'
 							       name="first_name"
 							       type="text"
@@ -21,7 +21,7 @@
 						</div>
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Last Name:</label>
-							<input class="dark-text inputField"
+							<input class="dark-text inputField form-control"
 							       v-model="contact.last_name"
 							       name="last_name"
 							       type="text"
@@ -33,7 +33,7 @@
 					<div class="row">
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Company Name:</label>
-							<input class="dark-text inputField"
+							<input class="dark-text inputField form-control"
 							       v-model="contact.company_name" name="company_name"
 							       type="text"
 							       id="company_name"
@@ -42,7 +42,7 @@
 						</div>
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Phone Number:</label>
-							<input class="dark-text inputField"
+							<input class="dark-text inputField form-control"
 							       v-model="contact.phone_number"
 							       name="phone_number"
 							       type="number"
@@ -56,7 +56,7 @@
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Email Address:</label>
 							<input
-								class="dark-text inputField"
+								class="dark-text inputField form-control"
 								v-model="contact.email"
 								name="email"
 								type="email"
@@ -66,7 +66,7 @@
 						</div>
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Password:</label>
-							<input class="dark-text inputField"
+							<input class="dark-text inputField form-control"
 							       v-model="contact.password"
 							       name="password"
 							       type="password"
@@ -80,21 +80,27 @@
 							<h3 class="dark-text text-left">Get Your Custom Cloudsnap Instance</h3>
 							<hr>
 							<div class="row">
-								<div class="col-xs-6 col-md-6">
-									<span class="d-md-inline-flex">
-										<input class="dark-text inputField"
-									             v-model="contact.subdomain"
-									             name="subdomain"
-									             id="subdomain"
-									             type="text"
-									             placeholder="Company Name"
-									             required
-									/>
+								<div class="col-xs-10 col-md-12">
+									<div style="display: flex;">
+										<input class="dark-text inputField form-control"
+										       v-model="contact.subdomain"
+										       name="subdomain"
+										       id="subdomain"
+										       type="text"
+										       placeholder="Company"
+										       required
+										/>
 										<p style="margin-top: 20px;" id="smallText">.numanage.io</p>
+										<input class="dark-text inputField" type="submit"
+										       value="Submit" id="submitBtn" />
+									</div>
 
-									<input class="btn" type="submit"
-									       value="Submit" id="submitBtn"></span>
 								</div>
+							</div>
+							<div class="row">
+
+										<sub> Example: companyname.numanage.io </sub>
+
 							</div>
 						</div>
 					</div>
@@ -189,16 +195,21 @@
 	#submitBtn {
 		background-color: #ff5128;
 		color:            #fff;
-		margin-left:      20px;
-		border-radius: 10px;
-		font-size: 24px;
+		padding:          20px;
+		border-radius:    10px;
+		font-size:        16px;
+		margin-bottom:    20px;
+		max-width:        150px;
 	}
 
 	.inputField {
 		border:        1px solid #ccc;
 		border-radius: 10px;
-		width:         250px;
 		margin-left:   20px;
+	}
+
+	.inputField:focus {
+		border-color: #2CAAE0;
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -206,8 +217,8 @@
 			padding:          8px;
 			background-color: #ff5128;
 			color:            #fff;
-			border-radius: 5px;
-			font-size: 16px;
+			border-radius:    5px;
+			font-size:        16px;
 		}
 
 		.inputField {
