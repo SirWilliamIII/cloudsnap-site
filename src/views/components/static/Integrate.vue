@@ -39,7 +39,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	#integrate {
 		height: 75vh;
 	}

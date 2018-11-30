@@ -6,7 +6,7 @@
 					<p>Sign up for a free 30&nbsp;day&nbsp;trial</p>
 					<span style="font-size:16px;">(no credit card necessary)</span>
                 </span>
-				<form id="contactForm" style="background-color: #fff;" @submit.prevent="onSubmit">
+				<form id="contactFormEls" style="background-color: #fff;" @submit.prevent="onSubmit">
 					<h2 class="dark-text text-center">User Information</h2>
 					<div class="row">
 						<div class="col-md-6 col-xs-12">
@@ -34,7 +34,8 @@
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Company Name:</label>
 							<input class="dark-text inputField form-control"
-							       v-model="contact.company_name" name="company_name"
+							       v-model="contact.company_name"
+							       name="company_name"
 							       type="text"
 							       id="company_name"
 							       required
@@ -84,7 +85,7 @@
 									<div style="display: flex;">
 										<input class="dark-text inputField form-control"
 										       v-model="contact.subdomain"
-										       name="subdomain"
+										       name="corporation[subdomain]"
 										       id="subdomain"
 										       type="text"
 										       placeholder="Company"
@@ -98,9 +99,7 @@
 								</div>
 							</div>
 							<div class="row">
-
-										<sub> Example: companyname.numanage.io </sub>
-
+								<sub> Example: companyname.numanage.io </sub>
 							</div>
 						</div>
 					</div>
@@ -111,9 +110,6 @@
 </template>
 
 <script>
-	import axios from 'axios'
-	const url = 'https://numanage.io/corporations.json'
-
 	export default {
 		name:    'SignUpForm',
 		data() {
@@ -130,21 +126,32 @@
 			}
 		},
 		methods: {
-			onSubmit() {
-				const serialized = JSON.stringify(this.contact)
-				axios.post(url, serialized)
-					.then(res => {
-						if(res.status !== 400) {
-							window.location =
-								`https://${ this.subdomain }.numanage.io/marketing-login?email=${ this.email }`
-						}
-						else {
-							console.log(res)
-						}
-					})
-					.catch(e => {
-						console.log(e)
-					})
+			onSubmit: function (e) {
+				e.preventDefault()
+				var email = $('#email').val().toLowerCase();
+				$('#email').val(email)
+
+				var subdomain = $('#subdomain').val()
+				var email = $('#email').val()
+				var url = "https://numanage.io/corporations.json"; // the script where you handle the form input.
+				var data = $("#contactFormEls").serialize()
+
+				$.ajax({
+					type:    "POST",
+					url:     url,
+					data:    data, // serializes the form's elements.
+					success: function (data) {
+						console.log(data);
+						window.location = "https://" + subdomain + ".numanage.io/marketing-login?email=" + email
+					},
+					error:   function (xhr) {
+						console.log("error")
+						console.log(xhr.responseText)
+
+					}
+				});
+
+				e.preventDefault();
 			}
 		}
 
@@ -166,7 +173,7 @@
 		opacity:   0.5;
 	}
 
-	#contactForm {
+	#contactFormEls {
 		padding: 20px 60px 40px 60px;
 	}
 

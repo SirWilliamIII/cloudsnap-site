@@ -59,7 +59,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.cta {
 		position:        relative;
 		padding:         80px 0;

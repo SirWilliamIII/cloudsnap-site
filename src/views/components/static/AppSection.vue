@@ -21,7 +21,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	#integrate {
 		background-image: url('../../../assets/images/various/integrate_bg.jpg');
 		margin:           auto;

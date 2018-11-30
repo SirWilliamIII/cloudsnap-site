@@ -17,7 +17,7 @@ import AOS from 'aos'
 Vue.use(VeeValidate)
 Vue.use(VueResource)
 Vue.use(VueAnalytics, {
-	id: 'UA-128386238-1',
+	id:           'UA-128386238-1',
 	router
 })
 

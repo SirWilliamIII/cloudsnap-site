@@ -26,7 +26,7 @@
 <script>
 	import axios from 'axios'
 
-	const url = 'https://nuvola.numanage.io/app_templates.json'
+	const url = 'https://nuvola.numanage.io/app_templates_marketing.json'
 
 	export default {
 		name: 'AppCards',
@@ -42,9 +42,11 @@
 			this.loading = true
 			axios.get(url)
 				.then(res => {
+					console.log(res)
 					return res.data
 				})
 				.then(icons => {
+					console.log(icons)
 					icons.sort((a, b) => {
 						if(a.name > b.name) {
 							return 1

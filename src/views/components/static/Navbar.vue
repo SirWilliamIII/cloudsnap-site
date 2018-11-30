@@ -69,7 +69,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
 
 	#nav-bar {
 		-webkit-transition: 0.55s;

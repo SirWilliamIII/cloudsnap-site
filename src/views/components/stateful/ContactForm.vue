@@ -202,11 +202,11 @@
 		border-radius: 10px;
 	}
 
-		.contact-form input[type="email"]:focus,
+	.contact-form input[type="email"]:focus,
 	.contact-form input[type="text"]:focus,
 	.contact-form textarea:focus {
-			border-color: #2CAAE0;
-		}
+		border-color: #2CAAE0;
+	}
 
 	#rowWrapper {
 		background-color: #f3f3f3;

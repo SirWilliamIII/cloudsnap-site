@@ -4,9 +4,10 @@
 		<div id="content">
 			<!-- TEMPLATE HERE-->
 			<Splash />
-			<Features />
+			<Reliability />
 			<AppList />
 			<Integrate />
+			<Features />
 			<Scalability />
 			<ContactSection />
 			<!-- END -->
@@ -24,12 +25,13 @@
 	import ContactSection from '../components/static/ContactSection'
 	import Integrate from '../components/static/Integrate'
 	import Scalability from '../components/static/Scalability'
+	import Reliability from '../components/static/Reliability'
 
 
 	export default {
 		name:       'IndexPage',
 		components: {
-			Navbar, Footer, Splash, AppList, Features, ContactSection, Integrate, Scalability
+			Navbar, Footer, Splash, AppList, Features, ContactSection, Integrate, Scalability, Reliability
 		}
 	}
 </script>

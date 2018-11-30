@@ -21,7 +21,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	#logo {
 		max-width:  180px;
 		max-height: 40px;
