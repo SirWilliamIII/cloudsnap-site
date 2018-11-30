@@ -4,10 +4,10 @@
 		<div id="content">
 			<!-- TEMPLATE HERE-->
 
-			<div class="row mx-auto" id="erpImgWrapper">
+			<div class="row mx-auto" id="ecomImgWrapper">
 				<div class="container-fluid text-center">
 					<div class="col-lg-12 col-xs-12">
-						<img :src="EcomImg" alt="erp" class="img-fluid" id="erpImg">
+						<img :src="EcomImg" alt="erp" class="img-fluid" id="ecomImg">
 					</div>
 				</div>
 			</div>
@@ -25,41 +25,40 @@
 				</div>
 			</div>
 
-			<div class="row mx-auto">
-				<h3 id="midTitle">Immediately update data from anywhere to anywhere</h3>
-			</div>
+
 			<!-- END -->
-			<div class="container">
+			<div class="container" id="ecomWrapper">
+				<div class="row mx-auto">
+					<h3 id="midTitle">Immediately update data from anywhere to anywhere</h3>
+				</div>
 				<div class="row mx-auto">
 					<div class="col-lg-3 offset-lg-1">
 						<img :src="ShopifyLogo" alt="logo" class="logos">
 					</div>
 					<div class="col-lg-6 offset-lg-1">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi architecto blanditiis
-						   cupiditate dicta ducimus, enim est fugit illo ipsa, labore laborum officiis perferendis
-						   praesentium quibusdam, quod ratione repudiandae voluptas.
+						<p>Shopify is completely cloud-based and hosted, which means you don’t have to worry about
+						   upgrading or maintaining software or web servers. This gives you the flexibility to access
+						   and run your business from anywhere with an internet connection.
 						</p>
 					</div>
 				</div>
 				<div class="row mx-auto">
 					<div class="col-lg-3 offset-lg-1">
-						<img :src="SalesForceLogo" alt="logo" class="logos">
+						<img :src="BigCommerce" alt="logo" class="logos">
 					</div>
 					<div class="col-lg-6 offset-lg-1">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi architecto blanditiis
-						   cupiditate dicta ducimus, enim est fugit illo ipsa, labore laborum officiis perferendis
-						   praesentium quibusdam, quod ratione repudiandae voluptas.
+						<p>BigCommerce Enterprise features an open architecture that’s designed to seamlessly
+						   integrate with your business today and grow with it in the future. Flexible APIs and webhooks make building your own integrations fast and cost effective.
 						</p>
 					</div>
 				</div>
 				<div class="row mx-auto">
 					<div class="col-lg-3 offset-lg-1 col-xs-8 offset-xs-2">
-						<img :src="ConcurLogo" alt="logo" class="logos">
+						<img :src="Magento" alt="logo" class="logos">
 					</div>
 					<div class="col-lg-6 offset-lg-1 col-xs-8 offset-xs-2">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi architecto blanditiis
-						   cupiditate dicta ducimus, enim est fugit illo ipsa, labore laborum officiis perferendis
-						   praesentium quibusdam, quod ratione repudiandae voluptas.
+						<p>Magento empowers thousands of retailers and brands with the best eCommerce platforms and
+						   flexible cloud solutions to rapidly innovate and grow.
 						</p>
 					</div>
 				</div>
@@ -73,8 +72,8 @@
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
 	import EcomImg from '../../assets/images/various/e-com-connect.png'
-	import SalesForceLogo from '../../assets/images/logos/salesforce-logo.png'
-	import ConcurLogo from '../../assets/images/logos/concur-logo-wide-black.png'
+	import BigCommerce from '../../assets/images/logos/bigcommerce-logo-wide.png'
+	import Magento from '../../assets/images/logos/magento-logo-wide.png'
 	import ShopifyLogo from '../../assets/images/logos/shopify-logo-white.svg'
 
 	export default {
@@ -84,7 +83,7 @@
 		},
 		data() {
 			return {
-				EcomImg, SalesForceLogo, ConcurLogo, ShopifyLogo
+				EcomImg, BigCommerce, Magento, ShopifyLogo
 			}
 		}
 	}
@@ -104,12 +103,18 @@
 		margin-top: 100px;
 	}
 
-	#erpImgWrapper {
+	#ecomWrapper {
+		background-color: #f1f1f1;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+	}
+
+	#ecomImgWrapper {
 		background-color: #fff;
 		width:            100%;
 	}
 
-	#erpImg {
+	#ecomImg {
 		margin-top:    40px;
 		margin-bottom: 40px;
 		width:         1000px;

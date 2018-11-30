@@ -1,46 +1,49 @@
 <template>
 	<div class="container">
 		<div class="row" id="mainRow">
-			<div class="col-md-12" id="signUpForm">
+			<div class="col-md-8 offset-md-2 col-xs-10 offset-xs-1" id="signUpForm">
                 <span id="signUpHeader">
 					<p>Sign up for a free 30&nbsp;day&nbsp;trial</p>
 					<span style="font-size:16px;">(no credit card necessary)</span>
                 </span>
-				<form id="contactForm" @submit="onSubmit"
-				      action="https://numanage.io/corporations.json"
-				      method="post" style="background-color: #fff;">
-					<h2 class="dark-text">User Information</h2>
+				<form id="contactForm" style="background-color: #fff;" @submit.prevent="onSubmit">
+					<h2 class="dark-text text-center">User Information</h2>
 					<div class="row">
-						<div class="col-md-6 col-xs-6">
+						<div class="col-md-6 col-xs-12">
 							<label class="dark-text">First Name:</label>
-							<input class="float-right input"
-							       v-model='contact.firstName'
+							<input class="float-right dark-text inputField"
+							       v-model='contact.first_name'
 							       name="first_name"
 							       type="text"
 							       id="first_name"
 							       required>
 						</div>
-						<div class="col-xs-6 col-md-6">
+						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Last Name:</label>
-							<input class="float-right dark-text" v-model="contact.lastName" name="last_name" type="text"
+							<input class="float-right dark-text inputField"
+							       v-model="contact.last_name"
+							       name="last_name"
+							       type="text"
 							       id="last_name"
-							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px; margin-left: 20px;"
 							       required>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-xs-6 col-md-6">
+						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Company Name:</label>
-							<input class="float-right dark-text" v-model="contact.company_name" name="company_name" type="text"
+							<input class="float-right dark-text inputField"
+							       v-model="contact.company_name" name="company_name"
+							       type="text"
 							       id="company_name"
-							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px; margin-left: 20px;"
 							       required>
 						</div>
-						<div class="col-xs-6 col-md-6">
+						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Phone Number:</label>
-							<input class="float-right dark-text" v-model="contact.phoneNum" name="phone_number" type="number"
+							<input class="float-right dark-text inputField"
+							       v-model="contact.phone_number"
+							       name="phone_number"
+							       type="number"
 							       id="phone_number"
-							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px; margin-left: 20px;"
 							       required>
 						</div>
 					</div>
@@ -49,44 +52,44 @@
 						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Email Address:</label>
 							<input
-								class="float-right dark-text"
+								class="float-right dark-text inputField"
 								v-model="contact.email"
 								name="email"
 								type="email"
 								id="email"
-								style="border: 1px solid #ccc; border-radius: 10px; width: 250px; margin-left: 20px;"
-								required
-							>
+								required>
 						</div>
-
-						<div class="col-xs-6 col-md-6">
+						<div class="col-xs-12 col-md-6">
 							<label class="dark-text">Password:</label>
-							<input class="float-right dark-text" v-model="contact.password" name="password" type="password"
-							       style="border: 1px solid #ccc; border-radius: 10px; width: 250px;
-							       margin-left: 20px;" required>
+							<input class="float-right dark-text inputField"
+							       v-model="contact.password"
+							       name="password"
+							       type="password"
+							       required>
 						</div>
 					</div>
 					<br>
 					<div class="row">
-						<div class="col-xs-12 col-md-6">
-							<h3 class="dark-text">Get Your Custom Cloudsnap Instance</h3>
+						<div class="col-xs-12 col-md-12">
+							<h3 class="dark-text text-left">Get Your Custom Cloudsnap Instance</h3>
 							<hr>
 							<div class="row">
-								<div class="col-7" style="padding-right:0;">
-									<input class="dark-text" v-model="contact.subdomain" name="subdomain" id="subdomain" type="text"
-									       placeholder="Company" style="border: 1px solid #ccc; border-radius: 10px;"
-									       required>
-									<sub class="dark-text">.numanage.io</sub>
-								</div>
-								<div class="col-4">
-									<input class="btn float-xs-right" type="submit"
+								<div class="col-xs-4 col-md-6">
+									<input class="dark-text inputField"
+									       v-model="contact.subdomain"
+									       name="subdomain"
+									       id="subdomain"
+									       type="text"
+									       placeholder="Company Name"
+									       required />
+
+									<input class="btn" type="submit"
 									       value="Submit" id="submitBtn">
-								</div>
-								<div class="col-12" style="font-size:13px;color:#999">Example: <u>companyname</u>.numanage.io
 								</div>
 							</div>
 						</div>
 					</div>
+
 				</form>
 			</div>
 		</div>
@@ -94,33 +97,35 @@
 </template>
 
 <script>
+	import axios from 'axios'
 	const url = 'https://numanage.io/corporations.json'
-
-	let contactForm = document.getElementById('contactForm')
-	let serialized = JSON.stringify(contactForm)
 
 	export default {
 		name:    'SignUpForm',
 		data() {
 			return {
 				contact: {
-					first_name: '',
-					last_name:  '',
-					company_name:    '',
-					phone_number:  '',
-					email:     '',
-					password:  '',
-					subdomain: ''
+					first_name:   '',
+					last_name:    '',
+					company_name: '',
+					phone_number: '',
+					email:        '',
+					password:     '',
+					subdomain:    ''
 				}
 			}
 		},
 		methods: {
 			onSubmit() {
-				this.$http.post(url, serialized)
+				const serialized = JSON.stringify(this.contact)
+				axios.post(url, serialized)
 					.then(res => {
 						if(res.status !== 400) {
 							window.location =
-								`https://${this.subdomain}.numanage.io/marketing-login?email=${this.email}`
+								`https://${ this.subdomain }.numanage.io/marketing-login?email=${ this.email }`
+						}
+						else {
+							console.log(res)
 						}
 					})
 					.catch(e => {
@@ -132,7 +137,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 
 	.dark-text {
 		color: #333
@@ -180,13 +185,28 @@
 		margin-left:      20px;
 	}
 
+	.inputField {
+		border:        1px solid #ccc;
+		border-radius: 10px;
+		width:         250px;
+		margin-left:   20px;
+	}
+
+	#subdomain {
+		width: 150px;
+	}
+
 	@media only screen and (max-width: 768px) {
 		#submitBtn {
-			padding:          5px 5px 5px 5px;
+			padding:          5px;
 			background-color: #ff5128;
 			color:            #fff;
-			margin-left:      30px;
-			font-size: 80%;
+			font-size:        80%;
+		}
+
+		.inputField {
+			margin-left: 0;
+			width:       auto;
 		}
 	}
 </style>

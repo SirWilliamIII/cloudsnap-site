@@ -5,20 +5,18 @@
 			<!-- Access Token for Postmail -->
 			<input type="hidden" name="access_token" value="geuvzcp1zvzd52yx9u3qw54q" />
 			<!-- INPUTS -->
-			<div class="row">
-				<input class="inputWidth" type="email" name="will@cloudsnap.com"
-				       placeholder="Your email address"
-				       required />
 
-				<input class="inputWidth" type="text" name="subject" placeholder="Subject" required />
+					<input class="form-control" type="email" name="sales@cloudsnap.com"
+					       placeholder="Your email address"
+					       required />
 
-				<textarea class="inputWidth" name="text" placeholder="Message" rows="4" required></textarea>
 
-				<input id="submitForm" type="submit" value="Send" class="btn inputWidth" />
-			</div>
+					<input class="form-control" type="text" name="subject" placeholder="Subject" required />
+
+				<textarea class="form-control" name="text" placeholder="Message" rows="4" required></textarea>
+
+				<input id="submitForm" type="submit" value="Send" class="btn form-control" />
 			<!-- INPUTS END-->
-
-
 			<input type="hidden" name="success_url" value="/#/thanks" />
 			<input type="hidden" name="error_url" value="/#/error/" />
 		</form>
@@ -56,7 +54,6 @@
 		color:            #ccc;
 		border-radius:    10px;
 		font-size:        24px;
-		width:            600px;
 		margin-top:       10px;
 		padding:          20px;
 	}
@@ -71,10 +68,6 @@
 		font-size:     66px;
 		margin-bottom: 20px;
 		margin-top:    30px;
-	}
-
-	.inputWidth {
-		width: 600px;
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -96,5 +89,6 @@
 		#email_form {
 			margin-right: 40px;
 		}
+
 	}
 </style>

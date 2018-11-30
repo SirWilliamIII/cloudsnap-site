@@ -32,14 +32,5 @@
 			border-radius: 10px;
 			padding:       20px;
 		}
-	#sign-up-btn {
-		background-color: #ff5128;
-		font-weight:      700;
-		font-size:        24px;
-		border-radius:    15px;
-		padding:          20px;
-		color:            #ccc;
-	}
-
 	}
 </style>

@@ -66,7 +66,7 @@
 		padding:         80px 0;
 		background:      #2CAAE0 center;
 		background-size: cover;
-		height:          85vh;
+		height:          80vh;
 	}
 
 	.cta .cta-content {
@@ -83,7 +83,6 @@
 	}
 
 	#postmailWrapper {
-		margin-right: 50px;
 		background:   rgba(0, 0, 0, 0);
 	}
 

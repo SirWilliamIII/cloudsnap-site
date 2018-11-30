@@ -44,9 +44,7 @@
 	}
 
 	#signUpBtn {
-		margin-top: 20px;
-		margin-left: 110px;
-		padding: 40px;
+
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -58,19 +56,11 @@
 			display: none;
 		}
 
-		#signUpBtn {
-			margin-top: 40px;
-			padding: 20px;
-			margin-left: 15px;
-		}
-
 		#splashContainer {
 			height: 100%;
 		}
 		#splashRow {
 			height: 100%;
 		}
-
-
 	}
 </style>

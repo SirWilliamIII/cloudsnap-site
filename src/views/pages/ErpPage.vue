@@ -25,30 +25,41 @@
 				</div>
 			</div>
 
-			<div class="row mx-auto">
-				<h3 id="midTitle">Immediately update data from anywhere to anywhere</h3>
-			</div>
 			<!-- END -->
-			<div class="container">
+			<div class="container" id="erpWrapper">
 				<div class="row mx-auto">
+
+					<div class="row mx-auto">
+						<h3 id="midTitle">Immediately update data from anywhere to anywhere</h3>
+					</div>
 					<div class="col-lg-3 offset-lg-1">
-						<img :src="SalesForceLogo" alt="sflogo" class="logos">
+						<img :src="Acumatica" alt="acumaticaLogo" class="logos">
 					</div>
 					<div class="col-lg-6 offset-lg-1">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi architecto blanditiis
-						   cupiditate dicta ducimus, enim est fugit illo ipsa, labore laborum officiis perferendis
-						   praesentium quibusdam, quod ratione repudiandae voluptas.
+						<p>Acumatica ERP is the fastest-growing Cloud ERP company. Acumatica delivers adaptable cloud and mobile technology
+						   with a unique all-inclusive user licensing model, enabling a complete, real time view of your business anytime, anywhere.
+
+						</p>
+					</div>
+				</div>
+
+				<div class="row mx-auto">
+					<div class="col-lg-3 offset-lg-1">
+						<img :src="Sage" alt="sagelogo" class="logos">
+					</div>
+					<div class="col-lg-6 offset-lg-1">
+						<p>Sage 300 ERP is a Windows based range of ERP software, available with a variety of
+						   database back ends. This can run under a Windows environment and has an option of being hosted by Sage
 						</p>
 					</div>
 				</div>
 				<div class="row mx-auto">
 					<div class="col-lg-3 offset-lg-1 col-xs-8 offset-xs-2">
-						<img :src="ConcurLogo" alt="concurlogo" class="logos">
+						<img :src="SAP" alt="saplogo" class="logos">
 					</div>
 					<div class="col-lg-6 offset-lg-1 col-xs-8 offset-xs-2">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi architecto blanditiis
-						   cupiditate dicta ducimus, enim est fugit illo ipsa, labore laborum officiis perferendis
-						   praesentium quibusdam, quod ratione repudiandae voluptas.
+						<p>With SAP, to increase control over your small business with software designed to
+						   grow with you. Streamline key processes, gain greater insight into your business, and make decisions based on real-time information – so you can drive profitable growth.
 						</p>
 					</div>
 				</div>
@@ -62,8 +73,9 @@
 	import Navbar from '../components/static/Navbar'
 	import Footer from '../components/static/Footer'
 	import ErpImg from '../../assets/images/various/erp-connect.png'
-	import SalesForceLogo from '../../assets/images/logos/salesforce-logo.png'
-	import ConcurLogo from '../../assets/images/logos/concur-logo-wide-black.png'
+	import SAP from '../../assets/images/logos/sap-logo.png'
+	import Acumatica from '../../assets/images/logos/acumatica-logo-tall.svg'
+	import Sage from '../../assets/images/logos/sage_logo.svg'
 
 	export default {
 		name:       'ErpPage',
@@ -72,7 +84,7 @@
 		},
 		data() {
 			return {
-				ErpImg, SalesForceLogo, ConcurLogo
+				ErpImg, SAP, Acumatica, Sage
 			}
 		}
 	}
@@ -119,6 +131,12 @@
 		max-width: 200px;
 		min-width: 200px;
 		padding:   20px;
+	}
+
+	#erpWrapper {
+		background-color: #f1f1f1;
+		border: 1px solid #ccc;
+		border-radius: 10px;
 	}
 
 	@media only screen and (max-width: 768px) {

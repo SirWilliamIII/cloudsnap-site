@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router/index'
 import VueAnalytics from 'vue-analytics'
 import VeeValidate from 'vee-validate'
+import VueResource from "vue-resource"
+
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -13,7 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 import AOS from 'aos'
 
 Vue.use(VeeValidate)
-
+Vue.use(VueResource)
 Vue.use(VueAnalytics, {
 	id: 'UA-128386238-1',
 	router
