@@ -29,7 +29,7 @@
 
 	@media only screen and (max-width: 768px) {
 		#main-img {
-			max-width: 340px;
+			max-width: 420px;
 			margin-top: 50px;
 		}
 	}

@@ -16,7 +16,7 @@
 		font-weight:      700;
 		font-size:        28px;
 		border-radius:    15px;
-		padding:          20px 60px 20px 60px;
+		padding:          20px 80px 20px 80px;
 		color:            #fff;
 	}
 
@@ -30,6 +30,13 @@
 			font-size:     24px;
 			border-radius: 10px;
 			padding:       20px;
+			width: 200px;
 		}
+
+
+	#sign-up-btn:hover {
+		background-color: #ff3100;
+		color:            #ccc;
+	}
 	}
 </style>

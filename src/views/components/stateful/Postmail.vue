@@ -6,16 +6,16 @@
 			<input type="hidden" name="access_token" value="geuvzcp1zvzd52yx9u3qw54q" />
 			<!-- INPUTS -->
 
-					<input class="form-control" type="email" name="sales@cloudsnap.com"
-					       placeholder="Your email address"
-					       required />
+			<input class="form-control" type="email" name="sales@cloudsnap.com"
+			       placeholder="Your email address"
+			       required />
 
 
-					<input class="form-control" type="text" name="subject" placeholder="Subject" required />
+			<input class="form-control" type="text" name="subject" placeholder="Subject" required />
 
-				<textarea class="form-control" name="text" placeholder="Message" rows="4" required></textarea>
+			<textarea class="form-control" name="text" placeholder="Message" rows="4" required></textarea>
 
-				<input id="submitForm" type="submit" value="Send" class="btn form-control" />
+			<input id="submitForm" type="submit" value="Send" class="btn form-control" />
 			<!-- INPUTS END-->
 			<input type="hidden" name="success_url" value="/#/thanks" />
 			<input type="hidden" name="error_url" value="/#/error/" />
@@ -54,8 +54,8 @@
 		color:            #ccc;
 		border-radius:    10px;
 		font-size:        24px;
-		margin-top:       10px;
-		padding:          20px;
+		text-align: center;
+		padding:          40px;
 	}
 
 	#submitForm:hover {
@@ -78,12 +78,14 @@
 			padding-top:    10px;
 		}
 
-		.inputWidth {
+		#submitForm {
+			font-size:  26px;
+			color: white;
+			margin-top: 10px;
 		}
 
-		#submitForm {
-			font-size:  18px;
-			margin-top: 10px;
+		#submitForm:hover {
+			color: #aaa;
 		}
 
 		#email_form {

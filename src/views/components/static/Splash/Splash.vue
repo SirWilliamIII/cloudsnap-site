@@ -1,15 +1,20 @@
 <template>
 	<header id="splash">
 		<div class="container" id="splashContainer">
-			<div class="row" id="splashRow">
-				<div class="col-md-5">
+			<div class="row">
+				<div class="col-md-5" id="headerWrapper">
 					<div class="headerContent">
 						<SplashText />
 					</div>
 				</div>
-				<div class="col-md-7 col-xs-12">
-					<SplashImg id="splashImg"/>
-					<SignUpBtn id="signUpBtn" />
+				<div class="col-md-7 col-xs-12 mx-auto">
+					<div class="row">
+						<SplashImg id="splashImg" />
+						<SignUpBtn id="signBtn"/>
+					</div>
+					<div class="row">
+
+					</div>
 				</div>
 			</div>
 		</div>
@@ -36,31 +41,34 @@
 
 	#splash {
 		margin-top: 100px;
-		height: 100vh;
+		height:     100vh;
 	}
 
 	.headerContent {
 		color: #fff;
 	}
 
-	#signUpBtn {
-
+	#signBtn {
+		margin-left: 200px;
+		margin-top: 50px;
 	}
 
 	@media only screen and (max-width: 768px) {
-		#splash {
-			margin-top: 20px;
-		}
 
 		.headerContent {
+		}
+
+		#headerWrapper {
 			display: none;
 		}
 
-		#splashContainer {
-			height: 100%;
+		#splashImg {
+			margin-left: -20px;
 		}
-		#splashRow {
-			height: 100%;
+
+		#signBtn {
+			margin-left: 90px;
+			margin-top: 110px;
 		}
 	}
 </style>
